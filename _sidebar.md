@@ -1,4 +1,4 @@
-* [首页](/)
+* [首页](/ "yexca'VRChat入门教程")
 * 上传
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
