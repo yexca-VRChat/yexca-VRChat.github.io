@@ -5,9 +5,13 @@
 
 # 文章
 
-* 官方文档：[VRChat](https://docs.vrchat.com/)
+* VRChat官方文档：[VRChat](https://docs.vrchat.com/)
 
 后来才知道官方文档，全英文，机翻读了大概
+
+* Blender官方文档：[Blender2.93参考手册](https://docs.blender.org/manual/zh-hans/2.93/)
+
+众所周知，官方文档永远看不懂
 
 * [VRChat模型制作及上传总篇(201912) - 星空月零 - 博客园](https://www.cnblogs.com/raitorei/p/12015876.html)
 
