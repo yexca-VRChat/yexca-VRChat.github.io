@@ -61,22 +61,67 @@
 
 关于后面的`C`：数值将根据设定的曲线改变
 
-| 简单(Simplified)                                             | 高级(Advanced)                                               |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220426/image.22irlehtq1fk.webp) | ![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220426/YO5V[YTTV81FOBFVREMD7]T.4hygp330s4c0.webp) |
-| 较稳定，容易配置，对外部冲击和力量反应较小                   | 不稳定，但允许更复杂的配置，对外部冲击和力量反应敏感         |
-| **Pull(拉力)**                                               |                                                              |
-| 将动骨拉回“静止位置”的力量，数值越大，力量越大(裙子越不容易动) |                                                              |
-| **Spring(弹性)**                                             | **Momentum**                                                 |
-| 动骨回到“静止位置”的摇晃程度                                 | 同`Spring`，具体效果请自行尝试                               |
-|                                                              | **硬度(Stiffness)**                                          |
-|                                                              | 使动骨保持在“静止位置”的强度，值越大越强                     |
-| **Immobile**                                                 |                                                              |
-| 动骨对骨骼的影响程度。值为1时不影响骨骼，即骨骼一直在“静止位置”，只有碰撞和抓取时才生效 |                                                              |
-| **重力(Gravity)**                                            |                                                              |
-| 重力对骨骼影响，小于0则反重力(裙子上飘)                      |                                                              |
-| **Gravity Falloff(重力衰减)**                                |                                                              |
-| 只有在上一项“重力”不为0时可用，控制重力对动骨“静止位置”的影响，值为1时不影响 |                                                              |
+<table>
+<thead>
+<tr>
+    <th>简单(Simplified)</th><th>高级(Advanced)</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220426/image.22irlehtq1fk.webp" referrerpolicy="no-referrer" alt="img">
+        </td>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220426/YO5V[YTTV81FOBFVREMD7]T.4hygp330s4c0.webp" referrerpolicy="no-referrer" alt="img">
+        </td>
+    </tr>
+    <tr>
+        <td>较稳定，容易配置，对外部冲击和力量反应较小</td>
+        <td>不稳定，但允许更复杂的配置，对外部冲击和力量反应敏感</td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Pull(拉力)</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2">将动骨拉回“静止位置”的力量，数值越大，力量越大(裙子越不容易动)</td>
+    </tr>
+    <tr>
+        <td><strong>Spring(弹性)</strong></td>
+        <td><strong>Momentum</strong></td>
+    </tr>
+    <tr>
+        <td>动骨回到“静止位置”的摇晃程度</td>
+        <td>同<code>Spring</code>，具体效果请自行尝试</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><strong>硬度(Stiffness)</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>使动骨保持在“静止位置”的强度，值越大越强</td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Immobile</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2">动骨对骨骼的影响程度。值为1时不影响骨骼，即骨骼一直在“静止位置”，只有碰撞和抓取时才生效</td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>重力(Gravity)</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2">重力对骨骼影响，小于0则反重力(裙子上飘)</td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Gravity Falloff(重力衰减)</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2">只有在上一项“重力”不为0时可用，控制重力对动骨“静止位置”的影响，值为1时不影响</td>
+    </tr>
+</tbody>
+</table>
 
 ### 参考参数
 
