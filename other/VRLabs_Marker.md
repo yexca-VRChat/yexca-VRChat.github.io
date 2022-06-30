@@ -26,7 +26,7 @@
 
 **Gesture to draw：**选择一个手势去写字，默认为point
 
-手势可参考：[浅析数值-动画器-菜单](/editing/summary.md)
+手势可参考：[数值](/Summary/Parameters?id=%e4%b8%89%e3%80%81%e6%89%8b%e5%8a%bf%e5%af%b9%e5%ba%94%e6%95%b0%e5%80%bc)
 
 **Adjustable brush size：**可调节画笔的大小
 

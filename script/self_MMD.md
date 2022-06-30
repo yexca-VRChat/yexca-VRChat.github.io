@@ -5,7 +5,7 @@
 - 舞蹈动画文件
 - 音乐
 
-关于MMD舞蹈转换，请参考：[固定世界MMD](/editing/set_MMD.md)
+关于MMD舞蹈转换，请参考：[固定世界MMD](/additional/set_MMD.md)
 
 不过这里要调整动画方向，点击动画文件，在右方”跟变换旋转-依据“选择”原始“
 
@@ -23,11 +23,11 @@
 
 ### 3）音频邦骨(可选)
 
-我制作一般会将音频邦骨在嘴部，邦骨参考：[物体绑骨](/editing/tied_bones.md)
+我制作一般会将音频邦骨在嘴部，邦骨参考：[物体绑骨](/additional/tied_bones.md)
 
 ### 4）制作音频开关
 
-录制开关参考：[FX-物品开关](/editing/switch.md)
+录制开关参考：[FX层-物品开关](/editing/switch.md)
 
 ## 三、动画器添加动画
 

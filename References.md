@@ -65,6 +65,14 @@
 
 由[ShineTrick閃輝詭詭](https://space.bilibili.com/317540)大佬制作，清晰讲述了Unity中换衣服，看到这视频前我以为不适配衣服只能去Blender修改
 
+* [成为VRChat接头大佬第二弹! 进阶接头教学以及脖子接面教学 [LoliKami]](https://www.bilibili.com/video/BV1SK411p7JY)
+
+由[LoliKamiGod](https://space.bilibili.com/97498443)大佬制作，换头文章/视频的主参考
+
+* [VRChat 运用Blender作模型的改模（2.82版本）](https://www.bilibili.com/video/BV1Vz4y1X7ec)
+
+由[Yami黯影](https://space.bilibili.com/329090122)大佬制作，改模的完整录屏，换头文章/视频的部分操作参考
+
 # 视频-Youtube
 
 * [VRChat Avatar Dynamics Tutorial - PhysBones](https://youtu.be/PTTnWUkswkU)
