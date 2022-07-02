@@ -104,6 +104,6 @@
 
 我**可能**还会把自己的学习的东西做成视频吧  
 
-~~我说了那么多次Markdown，这不得挂个我自己写的文章：~~
-[Markdown简述(github)](https://git.yexca.xyz/#/Markdown/Markdown_Guide)
+~~我说了那么多次Markdown，这不得挂个我自己写的文章：~~  
+[Markdown简述(github)](https://git.yexca.xyz/#/Markdown/Markdown_Guide)  
 [Markdown简述(博客)](https://yexca.xyz/index.php/2022/05/28/markdown%e7%ae%80%e6%98%93%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0/)
