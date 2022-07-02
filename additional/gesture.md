@@ -1,6 +1,6 @@
 目标：开关打开时，右手握拳触发动画
 
-查表知：右手手势参数为“GestureRight”，类型为“Int”；握拳时，“GestureRight”值为“1”
+[查表](/Summary/Parameters#三、手势对应数值)知：右手手势参数为“GestureRight”，类型为“Int”；握拳时，“GestureRight”值为“1”
 
 # 动画
 
