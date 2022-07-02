@@ -23,7 +23,15 @@
 
 * [Write Defaults的作用_煮粥侠_99的博客-CSDN博客](https://blog.csdn.net/yjy99yjy999/article/details/82730948)
 
+文章`VRLabs Marker`介绍的参考
+
 * [Blender - 2.8x - Screencast Keys (v3.0) - 屏幕显示按键信息插件介绍以及安装](https://blog.csdn.net/linjf520/article/details/108108603)
+
+Blender换头视频的显示按键插件参考
+
+* [【心得】Dynamic Bone (&乳搖) 研究筆記](https://forum.gamer.com.tw/Co.php?bsn=60602&sn=5966)
+
+~~我看不懂，但我大受震撼~~，三篇文章，动骨碰撞的添加
 
 ***
 
