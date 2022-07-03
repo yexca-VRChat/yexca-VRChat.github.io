@@ -51,16 +51,18 @@
 
 用于制作手势触发动画
 
-| Index (数值) | Gesture (手势)     |
-| :----------- | :----------------- |
-| 0            | Neutral (自然)     |
-| 1            | Fist (握拳)        |
-| 2            | HandOpen (张开手)  |
-| 3            | fingerpoint (指)   |
-| 4            | Victory (剪刀手)   |
-| 5            | RockNRoll (我爱你) |
-| 6            | HandGun (手枪)     |
-| 7            | ThumbsUp (点赞)    |
+| Index (数值) | Gesture (手势)     | PC按键   |
+| :----------- | :----------------- | -------- |
+| 0            | Neutral (自然)     | Shift+F1 |
+| 1            | Fist (握拳)        | Shift+F2 |
+| 2            | HandOpen (张开手)  | Shift+F3 |
+| 3            | fingerpoint (指)   | Shift+F4 |
+| 4            | Victory (剪刀手)   | Shift+F5 |
+| 5            | RockNRoll (我爱你) | Shift+F6 |
+| 6            | HandGun (手枪)     | Shift+F7 |
+| 7            | ThumbsUp (点赞)    | Shift+F8 |
+
+*注：PC按键：左Shift为左手，右Shift为右手*
 
 ## 四、口型对应值
 
