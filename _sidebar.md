@@ -16,13 +16,15 @@
     * [固定世界物品](/additional/set_object.md)
     * [固定世界MMD](/additional/set_MMD.md)
     * [手势开关](/additional/gesture.md)
+* 表情
+    * [添加手势表情](/emote/emote_anim.md)
+    * [Blender添加形态键](/emote/Add_BlenderShapes.md)
 * 脚本
     * [自身跳MMD舞蹈](/script/self_MMD.md)
     * [随机播放音乐](/script/Shuffle_Playback.md)
     * [顺序播放音乐](/script/play_in_order.md)
 * 其他
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
-    * [添加手势表情](/other/expression.md)
     * [Blender换头](/other/Blender_change_head.md)
 * 模块
     * [SDK描述文件(VRC Avatar Descriptor)简介](/div/VRC_Avatar_Descriptor.md)
