@@ -79,7 +79,8 @@ Blender换头视频的显示按键插件参考
 
 * [VRChat 运用Blender作模型的改模（2.82版本）](https://www.bilibili.com/video/BV1Vz4y1X7ec)
 
-由[Yami黯影](https://space.bilibili.com/329090122)大佬制作，改模的完整录屏，换头文章/视频的部分操作参考
+由[Yami黯影](https://space.bilibili.com/329090122)大佬制作，改模的完整录屏，换头文章/视频的部分操作参考  
+~~这大佬和我一样喜欢用YouTube听歌~~
 
 # 视频-Youtube
 
