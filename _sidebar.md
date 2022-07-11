@@ -1,4 +1,12 @@
 * [首页](/ "yexca'VRChat入门教程 - Docs")
+* [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md)
+* [PhysBones](/dynamics/PhysBones.md)
+* [Contacts](/dynamics/Contacts.md)
+* [State Behaviors](/div/State_Behaviors.md)
+* [一、动画](/Summary/Anime.md)
+* [二、数值](/Summary/Parameters)
+* [三、图层](/Summary/Layers.md)
+* [四、菜单](/Summary/Menu.md)
 * 上传
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
@@ -26,14 +34,4 @@
 * 其他
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
     * [Blender换头](/other/Blender_change_head.md)
-* 模块
-    * [SDK描述文件(VRC Avatar Descriptor)简介](/div/VRC_Avatar_Descriptor.md)
-    * [动骨(PhysBones)简介](/dynamics/PhysBones.md)
-    * [交互(Contacts)简介](/dynamics/Contacts.md)
-    * [State Behaviors脚本简介](/div/State_Behaviors.md)
-* 综述
-    * [一、动画](/Summary/Anime.md)
-    * [二、数值](/Summary/Parameters)
-    * [三、图层](/Summary/Layers.md)
-    * [四、菜单](/Summary/Menu.md)
 * [参考资料](/References.md)
