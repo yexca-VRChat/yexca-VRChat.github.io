@@ -2,7 +2,7 @@
 
 # 公告  <!-- {docsify-ignore} -->
 
-**应该大概差不多了吧，就这样吧~**  
+**模块修改-2022.07.11**  
 
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
@@ -14,43 +14,41 @@
 
 原本只是说明，考虑到手机端不是太方便观看便加上目录
 
-* 上传：这部分是模型的上传
+* [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md)
+* [PhysBones](/dynamics/PhysBones.md)
+* [Contacts](/dynamics/Contacts.md)
+* [State Behaviors](/div/State_Behaviors.md)
+* [一、动画](/Summary/Anime.md)
+* [二、数值](/Summary/Parameters)
+* [三、图层](/Summary/Layers.md)
+* [四、菜单](/Summary/Menu.md)
+* 上传：*这部分是模型的上传*
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
     * [MMD模型转为FBX](/Upload/mmd_to_fbx.md)
     * [MMD模型上传](/Upload/mmd_upload.md)
     * [SDK2转为SDK3](/Upload/sdk2_to_sdk3.md)
-* 修改：这部分是简单的修改
+* 修改：*这部分是简单的修改*
     * [添加默认图层与菜单](/editing/Playable_Layers.md)
     * [Base层-蹲姿，趴姿](/editing/Base.md)
     * [Action层-AFK](/editing/afk.md)
     * [FX层-物品开关](/editing/switch.md)
-* 附加：修改的附加部分
+* 附加：*修改的附加部分*
     * [物体绑骨](/additional/tied_bones.md)
     * [换衣服](/additional/change_clothes.md)
     * [固定世界物品](/additional/set_object.md)
     * [固定世界MMD](/additional/set_MMD.md)
     * [手势开关](/additional/gesture.md)
-* 表情：表情制作相关
+* 表情：*表情制作相关*
     * [添加手势表情](/emote/emote_anim.md)
     * [Blender添加形态键](/emote/Add_BlenderShapes.md)
-* 脚本：此部分修改使用了VRC的脚本
+* 脚本：*此部分修改使用了VRC的脚本*
     * [自身跳MMD舞蹈](/script/self_MMD.md)
     * [随机播放音乐](/script/Shuffle_Playback.md)
     * [顺序播放音乐](/script/play_in_order.md)
-* 其他：其他修改
+* 其他：*其他修改*
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
     * [Blender换头](/other/Blender_change_head.md)
-* 模块：VRChat相关的模块
-    * [SDK描述文件(VRC Avatar Descriptor)简介](/div/VRC_Avatar_Descriptor.md)
-    * [动骨(PhysBones)简介](/dynamics/PhysBones.md)
-    * [交互(Contacts)简介](/dynamics/Contacts.md)
-    * [State Behaviors脚本简介](/div/State_Behaviors.md)
-* 综述：综合讲述修改步骤
-    * [一、动画](/Summary/Anime.md)
-    * [二、数值](/Summary/Parameters)
-    * [三、图层](/Summary/Layers.md)
-    * [四、菜单](/Summary/Menu.md)
 * [参考资料](/References.md)
 
 # 待办 <!-- {docsify-ignore} -->
@@ -76,7 +74,9 @@
 
 ~~我本可以忍受WordPress，如果我不曾遇见Markdown~~
 
-现在两网站将一起更新，但此网站会更快点？
+~~现在两网站将一起更新，但此网站会更快点？~~
+
+考虑到网站<https://vrchat.yexca.xyz>修改，形式或者说功能？与此网站冲突，特修改侧边样式，将模块放到前面
 
 # 记录  <!-- {docsify-ignore} -->
 这里是我为什么做这些，仅记录使用  
