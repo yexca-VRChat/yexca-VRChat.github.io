@@ -27,6 +27,7 @@
 * 表情
     * [添加手势表情](/emote/emote_anim.md)
     * [Blender添加形态键](/emote/Add_BlenderShapes.md)
+    * [一键复制](/emote/Pumkin_Tools.md)
 * 脚本
     * [自身跳MMD舞蹈](/script/self_MMD.md)
     * [随机播放音乐](/script/Shuffle_Playback.md)
