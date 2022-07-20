@@ -111,7 +111,7 @@
 
 ![](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220720/image.3te260424lu0.webp)
 
-**`一些`**的原因：若勾选`Ordered Interruption`则只有优先级比A->B高的才能打断
+`一些`的原因：若勾选`Ordered Interruption`则只有优先级比A->B高的才能打断
 
 过渡的优先级从上到下依次降低，即优先级`A->B`>`A->C`>`A->D`
 
