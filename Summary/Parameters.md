@@ -4,16 +4,26 @@
 
 在”动画器“中添加参数有四种类型
 
-- Float 浮点数，可以理解为小数
-- Int 整数型，可以理解为整数
-- Bool 布尔型，只有”True“和”False“两种取值
-- Trigger 触发器(好像在VRC中没用？)
+- Float 
 
-下表为VRChat数值类型(一个模型的“数值”上限为“128 bits”)
+  浮点数，可以理解为小数
+
+- Int 
+
+  整数型，可以理解为整数
+
+- Bool 
+
+  布尔型，只有”True“和”False“两种取值
+
+- Trigger 
+
+  触发器，和布尔型很像，但只能被设为true，一旦被过渡使用就会自动被设为false(好像在VRC中没用？)
+
+下表为VRChat数值类型(一个模型的“数值”上限为“256 bits”)
 
 | 数值类型 | 取值范围          | 存储占用 | 备注                                                         |
 | :------- | :---------------- | :------- | :----------------------------------------------------------- |
-|          |                   |          |                                                              |
 | int      | `0` ~ `255`       | 8 bits   | Unsigned 8-bit int.                                          |
 | float    | `-1.0` ~ `1.0`    | 8 bits   | Signed 8-bit [minifloat](https://en.wikipedia.org/wiki/Minifloat) |
 | bool     | `True` or `False` | 1 bit    |                                                              |
