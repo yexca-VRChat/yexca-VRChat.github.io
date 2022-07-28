@@ -32,7 +32,7 @@
     * [自身跳MMD舞蹈](/script/self_MMD.md)
     * [随机播放音乐](/script/Shuffle_Playback.md)
     * [顺序播放音乐](/script/play_in_order.md)
-    * [出场动画] (/script/Start.md)
+    * [出场动画](/script/Start.md)
 * 其他
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
     * [Blender换头](/other/Blender_change_head.md)
