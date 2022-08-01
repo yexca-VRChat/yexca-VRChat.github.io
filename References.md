@@ -13,6 +13,8 @@
 
 众所周知，官方文档永远看不懂
 
+* [Unity 用户手册(2019.4 LTS)](https://docs.unity3d.com/cn/2019.4/Manual/index.html)
+
 * [VRChat模型制作及上传总篇(201912) - 星空月零 - 博客园](https://www.cnblogs.com/raitorei/p/12015876.html)
 
 看的第一篇文章，当时Google搜`vrchat上传mmd模型`第一个结果，虽然非常全面但教程较旧
@@ -36,6 +38,8 @@ Blender换头视频的显示按键插件参考
 * [Unity动画系统详解3：如何播放、切换动画？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/144912096)
 
 之前看不懂的部分看懂啦~
+
+* [Unity Cloth 布料模擬教學](https://www.cg.com.tw/UnityCloth/)
 
 ***
 
