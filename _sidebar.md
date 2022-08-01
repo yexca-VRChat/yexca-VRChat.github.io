@@ -7,6 +7,7 @@
 * [二、数值](/Summary/Parameters)
 * [三、图层](/Summary/Layers.md)
 * [四、菜单](/Summary/Menu.md)
+* [Unity布料简介](/Cloth/Cloth.md)
 * 上传
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
