@@ -22,6 +22,7 @@
 * [二、数值](/Summary/Parameters)
 * [三、图层](/Summary/Layers.md)
 * [四、菜单](/Summary/Menu.md)
+* [Unity布料简介](/Cloth/Cloth.md)
 * 上传：*这部分是模型的上传*
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
@@ -47,6 +48,7 @@
     * [自身跳MMD舞蹈](/script/self_MMD.md)
     * [随机播放音乐](/script/Shuffle_Playback.md)
     * [顺序播放音乐](/script/play_in_order.md)
+    * [出场动画](/script/Start.md)
 * 其他：*其他修改*
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
     * [Blender换头](/other/Blender_change_head.md)
