@@ -2,7 +2,7 @@
 
 # 公告  <!-- {docsify-ignore} -->
 
-**模块修改-2022.07.11**  
+**最后修改-2022.08.06**  
 
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
@@ -12,17 +12,18 @@
 
 # 说明/目录 <!-- {docsify-ignore} -->
 
-原本只是说明，考虑到手机端不是太方便观看便加上目录
+~~原本只是说明，考虑到手机端不是太方便观看便加上目录~~ 鉴于想要侧边栏简洁，此处添加说明
 
-* [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md)
-* [PhysBones](/dynamics/PhysBones.md)
-* [Contacts](/dynamics/Contacts.md)
-* [State Behaviors](/div/State_Behaviors.md)
-* [一、动画](/Summary/Anime.md)
-* [二、数值](/Summary/Parameters)
-* [三、图层](/Summary/Layers.md)
-* [四、菜单](/Summary/Menu.md)
-* [Unity布料简介](/Cloth/Cloth.md)
+* [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md) *VRChat描述文件的介绍*
+* [PhysBones](/dynamics/PhysBones.md) *VRChat动骨的介绍*
+* [Contacts](/dynamics/Contacts.md) *VRChat交互的介绍*
+* [State Behaviors](/div/State_Behaviors.md) *VRChat提供的状态机脚本的介绍*
+* [Cloth](/div/Cloth.md) *Unity布料简介*
+* [Particle System](/div/Particle_System.md) *Unity粒子系统简介*
+* [Animation](/Summary/Anime.md) *动画的制作*
+* [Parameters](/Summary/Parameters) *数值的类型与官方数值*
+* [Animator Layers](/Summary/Layers.md) *Unity动画器的图层*
+* [VRChat Menu](/Summary/Menu.md) *VRChat的菜单*
 * 上传：*这部分是模型的上传*
     * [上传前准备](/Upload/Prepare.md)
     * [成品模型上传](/Upload/Upload.md)
@@ -61,15 +62,16 @@
 * [x] SDK描述文件(VRC Avatar Descriptor)的介绍
 * [x] 修改/制作表情动画
 * [X] Blender换头
-* [ ] 粒子系统（这个因个人能力有限，可能不会做视频）
+* [X] 粒子系统（这个因个人能力有限，可能不会做视频）
 * [X] 顺序播放音乐
 * [X] 按手势 拔出和发射武器
-* [ ] 更改自身亮度
+* [X] 更改自身亮度
 * [ ] 制作动作动画
 * [X] 出场动画
 * [ ] 换头发(我好像没有相关物品，可能做不了)
 * [ ] 换颜色
 * [ ] 多个头手势与嘴型
+* [ ] 挥动武器显示特效
 
 ***
 
