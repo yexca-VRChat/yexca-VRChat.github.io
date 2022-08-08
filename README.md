@@ -7,7 +7,9 @@
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
 
-所有图片均使用Github外链，如加载不出，可能是网络问题 ~~(当然，能访问这里应该没啥问题了)~~  
+~~所有图片均使用Github外链，如加载不出，可能是网络问题 (当然，能访问这里应该没啥问题了)~~  
+
+所有图片已替换为Staticaly的CDN链接  
 另外我VRChat的ID为[yexca](https://vrchat.com/home/user/usr_16490da9-3083-4d90-baab-f19d939c2732)  
 
 # 说明/目录 <!-- {docsify-ignore} -->

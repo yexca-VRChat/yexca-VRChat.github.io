@@ -14,7 +14,7 @@
 
 定义发送信号的体积和参数(Collision Tags)
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220427/image.ebh40gdczco.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220427/image.ebh40gdczco.webp)
 
 ### Root Transform
 
@@ -44,7 +44,7 @@
 
 定义接受信号的体积与参数(Collision Tags)，然后输出相应参数
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220427/image.4zfxznntlkg0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220427/image.4zfxznntlkg0.webp)
 
 ### Root Transform
 
@@ -72,7 +72,7 @@
 
 ### Receiver
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220427/image.66905l2pgso0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220427/image.66905l2pgso0.webp)
 
 定义接受到信号后所改变的参数，参数后填入名字即为要改变的参数
 

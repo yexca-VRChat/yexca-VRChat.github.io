@@ -8,7 +8,7 @@
 
 以右手的“Point”为例
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220322/image.4tnhuoe1z3s0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220322/image.4tnhuoe1z3s0.webp)
 
 ## 二、修改动画
 
@@ -19,7 +19,7 @@
 在制作多个表情时，请将所有表情涉及到的BlendShaper的值设为0(除当前表情使用的)，防止表情冲突
 图方便可以将所有BlendShaper设为0
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220322/image.14s44hc2egg0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220322/image.14s44hc2egg0.webp)
 
 ## 三、后续
 

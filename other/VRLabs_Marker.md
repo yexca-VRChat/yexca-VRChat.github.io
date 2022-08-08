@@ -16,7 +16,7 @@
 
 ## 二、简介
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220322/image.227jhy6gwfpc.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220322/image.227jhy6gwfpc.webp)
 
 **Avatar：**显示要加入的模型名字，可替换
 
@@ -50,7 +50,7 @@
 
 选择好后点击“Generate Marker” ，等待一会
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220322/image.38b74nyenpy0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220322/image.38b74nyenpy0.webp)
 
 进入“播放”模式，在“Assets-VRLabs-Marker-Resources”找到控制器“M_Gesture”拖到模型控制器，然后点击脚本的第一个按钮“Adjust MarkerTarget transform”开始调整画笔的位置
 

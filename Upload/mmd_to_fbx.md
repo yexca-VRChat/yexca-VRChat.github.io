@@ -46,7 +46,7 @@ Github链接：[Releases · absolute-quantum/cats-blender-plugin (github.com)](h
 
 如图设置
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220418/%E7%9C%BC%E9%83%A8%E8%BF%BD%E8%B8%AA.6a4bwsz8fyg0.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220418/%E7%9C%BC%E9%83%A8%E8%BF%BD%E8%B8%AA.6a4bwsz8fyg0.webp)
 
 点击”Create Eye Tracking“即可，如果未找到，请选择”基型“
 
@@ -54,7 +54,7 @@ Github链接：[Releases · absolute-quantum/cats-blender-plugin (github.com)](h
 
 如图所示
 
-![img](https://cdn.jsdelivr.net/gh/yexca/image_hosting@master/20220418/%E5%98%B4%E9%83%A8%E5%8F%A3%E5%9E%8B.288ghboc1vvo.webp)
+![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220418/%E5%98%B4%E9%83%A8%E5%8F%A3%E5%9E%8B.288ghboc1vvo.webp)
 
 点击”Create Visemes“即可
 
