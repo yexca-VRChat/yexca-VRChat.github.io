@@ -2,19 +2,19 @@
 
 # 公告  <!-- {docsify-ignore} -->
 
-**最后修改-2022.08.06**  
+**最后修改-2022.08.08**  
 
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
 
 ~~所有图片均使用Github外链，如加载不出，可能是网络问题 (当然，能访问这里应该没啥问题了)~~  
-
 所有图片已替换为Staticaly的CDN链接  
 另外我VRChat的ID为[yexca](https://vrchat.com/home/user/usr_16490da9-3083-4d90-baab-f19d939c2732)  
 
 # 说明/目录 <!-- {docsify-ignore} -->
 
-~~原本只是说明，考虑到手机端不是太方便观看便加上目录~~ 鉴于想要侧边栏简洁，此处添加说明
+~~原本只是说明，考虑到手机端不是太方便观看便加上目录~~  
+鉴于想要侧边栏简洁，此处添加说明
 
 * [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md) *VRChat描述文件的介绍*
 * [PhysBones](/dynamics/PhysBones.md) *VRChat动骨的介绍*
@@ -83,13 +83,10 @@
 目前已经更换网站系统，文章 ~~(如果有)~~ 将继续发布，原有文章链接替换完毕，不再更新
 
 # 关于此网站  <!-- {docsify-ignore} -->
-这个网站是部署在Github上的，主要是在做网盘网站时接触了Markdown觉得很好用，又得知可以直接使用Markdown进行建网站便尝试了一下，~~以后更新应该会在这里吧~~，毕竟WordPress打开写文章太难受了  
-
-~~我本可以忍受WordPress，如果我不曾遇见Markdown~~
-
-~~现在两网站将一起更新，但此网站会更快点？~~
-
-考虑到网站<https://vrchat.yexca.xyz>修改，形式或者说功能？与此网站冲突，特修改侧边样式，将模块放到前面
+这个网站是部署在Github上的，主要是在做网盘网站时接触了Markdown觉得很好用，又得知可以直接使用Markdown进行建网站便尝试了一下，~~以后更新应该会在这里吧~~，毕竟WordPress打开写文章太难受了 ~~(我本可以忍受WordPress，如果我不曾遇见Markdown)~~  
+~~现在两网站将一起更新，但此网站会更快点？~~  
+考虑到网站<https://vrchat.yexca.xyz>修改，形式或者说功能？与此网站冲突，特修改侧边样式，将模块放到前面  
+产生了将此网站改模相关文章删除的想法-2022.08.08
 
 # 记录  <!-- {docsify-ignore} -->
 这里是我为什么做这些，仅记录使用  
