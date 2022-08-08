@@ -40,6 +40,7 @@ Blender换头视频的显示按键插件参考
 之前看不懂的部分看懂啦~
 
 * [Unity Cloth 布料模擬教學](https://www.cg.com.tw/UnityCloth/)
+* [Unity粒子系统简单常用功能介绍-腾讯游戏学堂](https://gameinstitute.qq.com/community/detail/126886)
 
 ***
 
@@ -89,6 +90,8 @@ Blender换头视频的显示按键插件参考
 
 由[Yami黯影](https://space.bilibili.com/329090122)大佬制作，改模的完整录屏，换头文章/视频的部分操作参考  
 ~~这大佬和我一样喜欢用YouTube听歌~~
+
+* [【VRchat教程】白嫖网上的特效+如何自制和修改粒子特效(讲的很迷）](https://www.bilibili.com/video/BV14s411K7TE)
 
 # 视频-Youtube
 
