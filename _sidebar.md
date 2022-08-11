@@ -38,4 +38,5 @@
 * 其他
     * [添加一个可以写字的笔](/other/VRLabs_Marker.md)
     * [Blender换头](/other/Blender_change_head.md)
+    * [PC下移动手](/other/PC_Arm_Moving.md)
 * [参考资料](/References.md)
