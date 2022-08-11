@@ -119,6 +119,10 @@ Base层的修改
 
 VRC脚本的介绍~~（看了和没看一样）~~
 
+* [VRChat Avatar 3.0 Tutorial - Color Change (Radial Puppet)](https://youtu.be/EkVlkrQ6ypE)
+
+改变颜色，不过使用的BlendTree
+
 # 最后
 
 因视频平台历史记录有限以及我的电脑重装过系统，浏览器记录也清除的原因，除Youtube外仅列出了我所能想起并能找到的所有链接，如果遇到其他有帮助的视频或之前看过这里没有的我将加入到这里
