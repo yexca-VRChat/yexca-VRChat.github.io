@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
   <!--折叠侧边栏-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <!-- Tabs -->
+  <style>
+    :root {
+      --docsifytabs-border-color: #ededed;
+      --docsifytabs-tab-highlight-color: pink;
+    }
+  </style>
 </head>
 <body>
   <div id="app">Link Start</div>
@@ -53,6 +60,14 @@
         bottom: 15,
         offset: 500
       },
+      // tab
+      tabs: {
+      persist    : true,      // default
+      sync       : true,      // default
+      theme      : 'material', // default classic, material
+      tabComments: true,      // default
+      tabHeadings: true       // default
+      },
       // // 阅读进度
       // progress: {
       //   position: "top",
@@ -70,6 +85,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <!--滑动至顶部-->
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <!--Tab https://unpkg.com/browse/docsify-tabs/-->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <!--阅读进度--
   <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>-->
 </body>
