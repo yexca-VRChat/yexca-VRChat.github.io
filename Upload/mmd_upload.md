@@ -67,6 +67,14 @@ Inert      惰性的
 
 此处参数参考：[VRchat模型之unity – 星空月零 – 博客园](https://www.cnblogs.com/raitorei/p/12008887.html)
 
+    @莎莎 衣服0.9  0.03  0.1  0
+
+    @JIUJIU 特柔还不会穿模 0.7  0.06  0.9  0.9
+
+    @Ryuu-San 耳朵和尾巴 0.7  0.07  0.666  0.52
+
+此处参数参考：[VRCHAT模型上传常见问题汇总_Ryuu-San的博客-CSDN博客](https://blog.csdn.net/TopOnelong/article/details/79002465)
+
 ### 2）碰撞
 
 动骨做完后在“游戏模式”下移动模型可以看到效果（穿模），这时可通过添加碰撞解决，例如腿部碰撞
