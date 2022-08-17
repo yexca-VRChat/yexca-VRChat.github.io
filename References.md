@@ -41,6 +41,7 @@ Blender换头视频的显示按键插件参考
 
 * [Unity Cloth 布料模擬教學](https://www.cg.com.tw/UnityCloth/)
 * [Unity粒子系统简单常用功能介绍-腾讯游戏学堂](https://gameinstitute.qq.com/community/detail/126886)
+* [Linux安装指定版本的Unity3D_Frank（Zhiyang-Dou）的博客-CSDN博客](https://blog.csdn.net/OOFFrankDura/article/details/123487279)
 
 ***
 
