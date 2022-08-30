@@ -5,6 +5,7 @@
 * [State Behaviors](/div/State_Behaviors.md)
 * [Cloth](/div/Cloth.md)
 * [Particle System](/div/Particle_System.md)
+* [Trail Renderer](/div/Trail_Renderer.md)
 * [Animation](/Summary/Anime.md)
 * [Parameters](/Summary/Parameters)
 * [Animator Layers](/Summary/Layers.md)

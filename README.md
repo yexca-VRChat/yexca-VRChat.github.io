@@ -2,7 +2,7 @@
 
 # 公告  <!-- {docsify-ignore} -->
 
-**最后修改-2022.08.08**  
+**最后修改-2022.08.30**  
 
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
@@ -20,8 +20,9 @@
 * [PhysBones](/dynamics/PhysBones.md) *VRChat动骨的介绍*
 * [Contacts](/dynamics/Contacts.md) *VRChat交互的介绍*
 * [State Behaviors](/div/State_Behaviors.md) *VRChat提供的状态机脚本的介绍*
-* [Cloth](/div/Cloth.md) *Unity布料简介*
-* [Particle System](/div/Particle_System.md) *Unity粒子系统简介*
+* [Cloth](/div/Cloth.md) *Unity布料*
+* [Particle System](/div/Particle_System.md) *Unity粒子系统*
+* [Trail Renderer](/div/Trail_Renderer.md) *Unity轨迹渲染器*
 * [Animation](/Summary/Anime.md) *动画的制作*
 * [Parameters](/Summary/Parameters) *数值的类型与官方数值*
 * [Animator Layers](/Summary/Layers.md) *Unity动画器的图层*
