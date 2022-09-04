@@ -40,8 +40,11 @@ Blender换头视频的显示按键插件参考
 之前看不懂的部分看懂啦~
 
 * [Unity Cloth 布料模擬教學](https://www.cg.com.tw/UnityCloth/)
+
 * [Unity粒子系统简单常用功能介绍-腾讯游戏学堂](https://gameinstitute.qq.com/community/detail/126886)
+
 * [Linux安装指定版本的Unity3D_Frank（Zhiyang-Dou）的博客-CSDN博客](https://blog.csdn.net/OOFFrankDura/article/details/123487279)
+
 * [在blender2.92中删除合并重叠点相邻点的方法-百度经验](https://jingyan.baidu.com/article/36d6ed1f59c1e55ace488348.html)
 
 ***
@@ -94,6 +97,7 @@ Blender换头视频的显示按键插件参考
 ~~这大佬和我一样喜欢用YouTube听歌~~
 
 * [【VRchat教程】白嫖网上的特效+如何自制和修改粒子特效(讲的很迷）](https://www.bilibili.com/video/BV14s411K7TE)
+
 * [VRChat模型教程，从换头到修改身体比例与速成布料。做模型教程界的泥石流](https://www.bilibili.com/video/BV1ob411e7Q8)
 
 # 视频-Youtube
