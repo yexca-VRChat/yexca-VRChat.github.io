@@ -1,4 +1,4 @@
-* [首页](/ "yexca'VRChat入门教程 - Docs")
+* [首页](/ "yexca'Docs")
 * [VRC Avatar Descriptor](/div/VRC_Avatar_Descriptor.md)
 * [PhysBones](/dynamics/PhysBones.md)
 * [Contacts](/dynamics/Contacts.md)
