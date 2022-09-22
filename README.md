@@ -2,7 +2,7 @@
 
 # 公告  <!-- {docsify-ignore} -->
 
-**不再更新维护，切勿问我问题，不会回复！**  
+**学业繁忙，不再更新维护，切勿问我问题，不会回复！**  
 
 此部分所有的文件应该都是我的网盘网站的链接  
 查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
@@ -71,11 +71,11 @@
 * [X] 顺序播放音乐
 * [X] 按手势 拔出和发射武器
 * [X] 更改自身亮度
-* [ ] 制作动作动画
+* [X] 制作动作动画
 * [X] 出场动画
 * [ ] *换头发(我好像没有相关物品，可能做不了)*
-* [ ] 换颜色
-* [ ] 多个头手势与嘴型
+* [X] 换颜色
+* [X] 多个头手势与嘴型
 * [X] 挥动武器显示特效
 * [X] 摇尾巴  
 * [ ] *Blender换衣服*
@@ -127,5 +127,5 @@
 我**可能**还会把自己的学习的东西做成视频吧  
 
 ~~我说了那么多次Markdown，这不得挂个我自己写的文章：~~  
-[Markdown简述(cnblogs)](https://www.cnblogs.com/yexca/p/Markdown.html)  
-[Markdown简述(博客)](https://yexca.xyz/index.php/2022/05/28/markdown%e7%ae%80%e6%98%93%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0/)
+~~[Markdown简述(cnblogs)](https://www.cnblogs.com/yexca/p/Markdown.html)~~  
+~~[Markdown简述(个人博客/独立博客)](https://yexca.xyz/index.php/2022/05/28/markdown%e7%ae%80%e6%98%93%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0/)~~
