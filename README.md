@@ -87,7 +87,9 @@
 # 关于网站vrchat.yexca.xyz  <!-- {docsify-ignore} -->
 我从接触VRChat到做出网站[yexca'VRChat入门教程](https://vrchat.yexca.xyz)其实只有大概一个半月的时间，肯定会有许多问题我没有遇到或无法解决，请见谅  
 ~~然后就是里面的文章可能就那样不会去修改了吧~~  
-目前已经更换网站系统，文章 ~~(如果有)~~ 将继续发布，原有文章链接替换完毕，不再更新
+目前已经更换网站系统，文章 ~~(如果有)~~ 将继续发布，原有文章链接替换完毕，不再更新  
+
+如果想继续访问可以在本地部署，仓库：<https://github.com/yexca-VRChat/blog>
 
 # 关于此网站  <!-- {docsify-ignore} -->
 这个网站是部署在Github上的，主要是在做网盘网站时接触了Markdown觉得很好用，又得知可以直接使用Markdown进行建网站便尝试了一下，~~以后更新应该会在这里吧~~，毕竟WordPress打开写文章太难受了 ~~(我本可以忍受WordPress，如果我不曾遇见Markdown)~~  
