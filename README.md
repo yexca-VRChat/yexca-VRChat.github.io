@@ -4,8 +4,9 @@
 
 **学业繁忙，不再更新维护，切勿问我问题，不会回复！**  
 
-此部分所有的文件应该都是我的网盘网站的链接  
-查看所有文件请访问<https://pan.vrchat.yexca.xyz>  
+~~此部分所有的文件应该都是我的网盘网站的链接~~ ~~查看所有文件请访问<https://pan.vrchat.yexca.xyz>~~   
+由于域名 `yexca.xyz` 与服务器将到期(2023.11.01)，所有文件下载将不可用  
+我也懒得改文章了，就这样吧
 
 ~~所有图片均使用Github外链，如加载不出，可能是网络问题 (当然，能访问这里应该没啥问题了)~~  
 所有图片已替换为Staticaly的CDN链接  
@@ -102,7 +103,7 @@
 不过说实话当时知道的还很少，就想着随便写写吧，反正没人看
 
 * 文章  
-然后我就去做了网站[yexca‘VRChat入门教程](https://vrchat.yexca.xyz/)，这个网站刚开始名字是`VRChat教程`，在制作过程查阅资料时发现自己知道的其实非常有限，于是~~连夜~~更改网站名称
+然后我就去做了网站[yexca‘VRChat入门教程](https://vrchat.yexca.xyz/)，这个网站刚开始名字是`VRChat教程`，在制作过程查阅资料时发现自己知道的其实非常有限，于是~~连夜~~更改网站名称  
 
 * 视频  
 起初只是想写文章，但有些东西是文章无法表现出来的，于是便去试着做了视频  
@@ -116,16 +117,4 @@
 
 > All about me
 
-<https://a.yexca.xyz>
-
-> 文章
-
-写文章是爱好，得益于学习了Markdown更喜欢记录东西啦~  
-
-> 视频
-
-我**可能**还会把自己的学习的东西做成视频吧  
-
-~~我说了那么多次Markdown，这不得挂个我自己写的文章：~~  
-~~[Markdown简述(cnblogs)](https://www.cnblogs.com/yexca/p/Markdown.html)~~  
-~~[Markdown简述(个人博客/独立博客)](https://yexca.xyz/index.php/2022/05/28/markdown%e7%ae%80%e6%98%93%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0/)~~
+<https://lit.link/yexca>
