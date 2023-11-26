@@ -2,7 +2,9 @@ Two Axis Puppet
 
 # 动画
 
-My Pan：[PC_Arm_Moving.unitypackage](https://pan.vrchat.yexca.xyz/Anim/PC_Arm_Moving.unitypackage)
+My Pan：[PC_Arm_Moving.unitypackage](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/PC_Arm_Moving.zip)
+
+*原包我已经找不到了，而且我已经卸载 Unity，这是从我保留下来的工程文件找的，不知道是否可用*
 
 # Arm_Rigth
 

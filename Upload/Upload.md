@@ -15,7 +15,7 @@
 
 #### <1>下载zh-cn.po文件
 
-下载链接：[zh-cn.po](https://pan.vrchat.yexca.xyz/Unity%26Blender/zh-cn.po)
+下载链接：[zh-cn.po](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/zh-cn.zip)
 
 #### <2>把文件放在Unity安装目录下
 

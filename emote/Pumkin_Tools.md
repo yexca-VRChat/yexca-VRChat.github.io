@@ -6,10 +6,7 @@
 
 Github：https://github.com/rurre/PumkinsAvatarTools
 
-文件直连(V1.1.1)：
-
-* Github：https://github.com/rurre/PumkinsAvatarTools/releases/download/1.1.1/PumkinsAvatarTools_v1.1.1.unitypackage
-* My Pan：https://pan.vrchat.yexca.xyz/Tools%28%E5%B7%A5%E5%85%B7%29/Pumkin%27s%20Avatar%20Tools/PumkinsAvatarTools_v1.1.1.unitypackage
+文件直连：Github V1.1.1：https://github.com/rurre/PumkinsAvatarTools/releases/download/1.1.1/PumkinsAvatarTools_v1.1.1.unitypackage
 
 # 模型处理
 

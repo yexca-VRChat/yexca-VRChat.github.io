@@ -6,8 +6,6 @@
 
 文件直链(Gitee)：[VRC工具箱v1.2.5_by如梦.unitypackage](https://gitee.com/cmoyuer/vrchat-avatar-toolkit/attach_files/937625/download/VRC工具箱v1.2.5_by如梦.unitypackage)
 
-文件直链(Pan)：[VRC工具箱v1.2.5_by如梦.unitypackage](https://pan.vrchat.yexca.xyz/Tools%28%E5%B7%A5%E5%85%B7%29/VRC%E5%B7%A5%E5%85%B7%E7%AE%B1/VRC%E5%B7%A5%E5%85%B7%E7%AE%B1v1.2.5_by%E5%A6%82%E6%A2%A6.unitypackage)
-
 作者B站：[如梦Nya的个人空间_哔哩哔哩_bilibili](https://space.bilibili.com/2562878)
 
 ### 2）导入文件

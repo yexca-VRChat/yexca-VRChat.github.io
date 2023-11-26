@@ -198,7 +198,7 @@ Collision Mass Scale：0
 
 #### 结构
 
-![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/20220801/CapsuleColliderDiagram.3al0s4nf8mc0.webp)
+![img](https://jsd.cdn.zzko.cn/gh/yexca/image_hosting@master/20220801/CapsuleColliderDiagram.3al0s4nf8mc0.webp)
 
 #### 添加到布料
 

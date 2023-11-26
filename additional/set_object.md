@@ -2,7 +2,7 @@
 
 ### 1）下载并导入Unity
 
-点击下载：[稳定刚体](https://pan.vrchat.yexca.xyz/%E9%81%93%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%88%9A%E4%BD%93.zip)
+点击下载：[稳定刚体](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/稳定刚体.zip)
 
 下载后解压将整个文件夹拖入Unity中
 

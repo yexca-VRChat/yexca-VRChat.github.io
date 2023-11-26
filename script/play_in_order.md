@@ -16,7 +16,7 @@
 
 参加参数后，新建一个图层，重命名后权重设为1，如下图所示
 
-![img](https://cdn.staticaly.com/gh/yexca/image_hosting@master/顺序播放音乐.6da5laejoag0.webp)
+![img](https://jsd.cdn.zzko.cn/gh/yexca/image_hosting@master/顺序播放音乐.6da5laejoag0.webp)
 
 ## 四、菜单
 
