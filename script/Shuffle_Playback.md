@@ -15,7 +15,7 @@
 
 参加参数后，新建一个图层，重命名后权重设为1，如下图所示
 
-![img](https://jsd.cdn.zzko.cn/gh/yexca/image_hosting@master/20220424/image.70l2gvlag0s0.webp)
+![img](https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/04-随机音乐/image.70l2gvlag0s0.webp)
 
 ## 四、菜单
 
