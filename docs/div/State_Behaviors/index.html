@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  添加
+  #
+
+在“动画器-图层”点击一个状态，在“检查器”中点击“添加行为”即可看到VRC的脚本
+
+  Animator Layer Controller
+  #
+
+
+  
+可以改变某一图层的权重(权重为1时正常播放)
+层权重将保持不变，直到某个其他状态再次运行此状态行为并将其重置
+
+  
+      
+          名称
+          Purpose(目的)
+      
+  
+  
+      
+          可播放(Playable)
+          选择要改变的动画层
+      
+      
+          图层(Layer)
+          选择影响第几个图层(从0开始) ，第0层(即第一个)无法被改变(始终为1)
+      
+      
+          Goal Weight
+          想要改变的权重
+      
+      
+          Blend Duration
+          Define the time period (in seconds) that you want the blend to take. 0 means instant.
+      
+      
+          Debug String
+          调试字符串，当此脚本运行时将此字符串输出至日志
+      
+  
+
+
+  Animator Locomotion Control
+  #
+
+
+  
+在播放动画时禁用动作，位置被锁定
+PC下只可上下移动视角，VR可自由移动，但模型不会动
+此状态将一直保持，直到某个其他状态再次运行此状态行为并将其改变
+
+  
+      
+          名称
+          Purpose(目的)
+      
+  
+  
+      
+          Locomotion Control
+          如果选择“Disable”，运动将被禁用
+      
+      
+          Debug String
+          调试字符串，当此脚本运行时将此字符串输出至日志
+      
+  
+
+
+  Animator Temporary Pose Space
+  #
+
+
+  
+调整视角球，移动至执行动画后额头位置
+视角球调整后将一直保持，直到某个其他状态再次运行此状态行为并将其改变
+
+  
+      
+          Pose Space
+          “Enter”将更改，“Exit”将退出并重置为默认
+      
+  
+  
+      
+          Fixed Delay
+          调整“Delay Time(延迟时间)”为时间段或百分比
+      
+      
+          Delay Time
+          视角球将在设定值后调整
+      
+      
+          Debug String
+          调试字符串，当此脚本运行时将此字符串输出至日志
+      
+  
+
+
+  Animator Tracking Control
+  #
+
+
+  ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/div/State_Behaviors/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="State Behaviors">
+  <meta property="og:description" content="添加 # 在“动画器-图层”点击一个状态，在“检查器”中点击“添加行为”即可看到VRC的脚本
+Animator Layer Controller # 可以改变某一图层的权重(权重为1时正常播放)
+层权重将保持不变，直到某个其他状态再次运行此状态行为并将其重置
+名称 Purpose(目的) 可播放(Playable) 选择要改变的动画层 图层(Layer) 选择影响第几个图层(从0开始) ，第0层(即第一个)无法被改变(始终为1) Goal Weight 想要改变的权重 Blend Duration Define the time period (in seconds) that you want the blend to take. 0 means instant. Debug String 调试字符串，当此脚本运行时将此字符串输出至日志 Animator Locomotion Control # 在播放动画时禁用动作，位置被锁定
+PC下只可上下移动视角，VR可自由移动，但模型不会动
+此状态将一直保持，直到某个其他状态再次运行此状态行为并将其改变
+名称 Purpose(目的) Locomotion Control 如果选择“Disable”，运动将被禁用 Debug String 调试字符串，当此脚本运行时将此字符串输出至日志 Animator Temporary Pose Space # 调整视角球，移动至执行动画后额头位置
+视角球调整后将一直保持，直到某个其他状态再次运行此状态行为并将其改变
+Pose Space “Enter”将更改，“Exit”将退出并重置为默认 Fixed Delay 调整“Delay Time(延迟时间)”为时间段或百分比 Delay Time 视角球将在设定值后调整 Debug String 调试字符串，当此脚本运行时将此字符串输出至日志 Animator Tracking Control #">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>State Behaviors | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/div/State_Behaviors/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.b59afa28754f151b746f71dfb42e807de0a808d7a6b006adbb3387790c6205de.js" integrity="sha256-tZr6KHVPFRt0b3HftC6AfeCoCNemsAatuzOHeQxiBd4=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">首页</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/VRC_Avatar_Descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/PhysBones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/Contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/State_Behaviors/" class="active">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Particle_System/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Trail_Renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">Upload</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_to_fbx/" class="">Mmd to Fbx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_upload/" class="">Mmd Upload</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Prepare/" class="">Prepare</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/sdk2_to_sdk3/" class="">Sdk2 to Sdk3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Upload/" class="">Upload</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">Editing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/afk/" class="">Afk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Base/" class="">Base</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Playable_Layers/" class="">Playable Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">Additional</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/change_clothes/" class="">Change Clothes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/gesture/" class="">Gesture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_MMD/" class="">Set Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_object/" class="">Set Object</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/tied_bones/" class="">Tied Bones</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">Emote</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Add_BlenderShapes/" class="">Add Blender Shapes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/emote_anim/" class="">Emote Anim</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Pumkin_Tools/" class="">Pumkin Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">Script</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/play_in_order/" class="">Play in Order</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/self_MMD/" class="">Self Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Shuffle_Playback/" class="">Shuffle Playback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Start/" class="">Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">Other</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/Blender_change_head/" class="">Blender Change Head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/PC_Arm_Moving/" class="">PC Arm Moving</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/VRLabs_Marker/" class="">Vrlabs Marker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/References/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>State Behaviors</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#添加">添加</a></li>
+        <li><a href="#animator-layer-controller">Animator Layer Controller</a></li>
+        <li><a href="#animator-locomotion-control">Animator Locomotion Control</a></li>
+        <li><a href="#animator-temporary-pose-space">Animator Temporary Pose Space</a></li>
+        <li><a href="#animator-tracking-control">Animator Tracking Control</a></li>
+        <li><a href="#avatar-parameter-driver">Avatar Parameter Driver</a></li>
+        <li><a href="#playable-layer-control">Playable Layer Control</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="添加">
+  添加
+  <a class="anchor" href="#%e6%b7%bb%e5%8a%a0">#</a>
+</h2>
+<p>在“动画器-图层”点击一个状态，在“检查器”中点击“添加行为”即可看到VRC的脚本</p>
+<h2 id="animator-layer-controller">
+  Animator Layer Controller
+  <a class="anchor" href="#animator-layer-controller">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.6dk3lrhp6lc0.webp" alt="img" /></p>
+<p>可以改变某一图层的权重(权重为1时正常播放)</p>
+<p>层权重将保持不变，直到某个其他状态再次运行此状态行为并将其重置</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>Purpose(目的)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>可播放(Playable)</td>
+          <td>选择要改变的动画层</td>
+      </tr>
+      <tr>
+          <td>图层(Layer)</td>
+          <td>选择影响第几个图层(从0开始) ，第0层(即第一个)无法被改变(始终为1)</td>
+      </tr>
+      <tr>
+          <td>Goal Weight</td>
+          <td>想要改变的权重</td>
+      </tr>
+      <tr>
+          <td>Blend Duration</td>
+          <td>Define the time period (in seconds) that you want the blend to take. 0 means instant.</td>
+      </tr>
+      <tr>
+          <td>Debug String</td>
+          <td>调试字符串，当此脚本运行时将此字符串输出至日志</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="animator-locomotion-control">
+  Animator Locomotion Control
+  <a class="anchor" href="#animator-locomotion-control">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.7db4fkj18d80.webp" alt="img" /></p>
+<p>在播放动画时禁用动作，位置被锁定</p>
+<p>PC下只可上下移动视角，VR可自由移动，但模型不会动</p>
+<p>此状态将一直保持，直到某个其他状态再次运行此状态行为并将其改变</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>Purpose(目的)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Locomotion Control</td>
+          <td>如果选择“Disable”，运动将被禁用</td>
+      </tr>
+      <tr>
+          <td>Debug String</td>
+          <td>调试字符串，当此脚本运行时将此字符串输出至日志</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="animator-temporary-pose-space">
+  Animator Temporary Pose Space
+  <a class="anchor" href="#animator-temporary-pose-space">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.6ju2p7xy6nc0.webp" alt="img" /></p>
+<p>调整视角球，移动至执行动画后额头位置</p>
+<p>视角球调整后将一直保持，直到某个其他状态再次运行此状态行为并将其改变</p>
+<table>
+  <thead>
+      <tr>
+          <th>Pose Space</th>
+          <th>“Enter”将更改，“Exit”将退出并重置为默认</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Fixed Delay</td>
+          <td>调整“Delay Time(延迟时间)”为时间段或百分比</td>
+      </tr>
+      <tr>
+          <td>Delay Time</td>
+          <td>视角球将在设定值后调整</td>
+      </tr>
+      <tr>
+          <td>Debug String</td>
+          <td>调试字符串，当此脚本运行时将此字符串输出至日志</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="animator-tracking-control">
+  Animator Tracking Control
+  <a class="anchor" href="#animator-tracking-control">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.79846t7qt1c0.webp" alt="img" /></p>
+<p>以下内容为Google翻译+自己修改</p>
+<p>跟踪设置将一直保留，直到某个其他状态再次运行此状态行为并将其重置。</p>
+<p>Animator Tracking Control 允许您启用或禁用 IK 或模拟化身身体各个不同部位的运动。将选项设置为“No Change”不会更改身体部位的当前值。“Tracking”会将其设置为跟随 IK 或模拟运动。“Animation”将强制身体部位遵从动画</p>
+<p>如果将所有 IK 跟踪点设置为Animation，您的动画将作为动画远程播放，而不是通过网络 IK 进行转换。对于各种类型的跟踪，这些“IK 跟踪点”是：</p>
+<ul>
+<li>PC：头、左手、右手</li>
+<li>3pt 追踪：头部、左手、右手</li>
+<li>6pt / FBT 追踪：头部、左手、右手、臀部、左脚、右脚</li>
+</ul>
+<p>除了模拟的 Eyes and Eyelid 外，所有部分都是 IK 驱动的。嘴和下巴由 visemes 驱动。</p>
+<p>例如，将 Left Hand 和 Right Hand 设置为 Animation 将忽略 IK 定义的手（和手臂）的位置，而是使用任何当前活动状态的运动来定义手和手臂的位置。将它们设置回 Tracking 将改为使用 IK。</p>
+<p>将 Eyes &amp; Eyelid 设置为 Animation 将禁用眼球运动和闭眼动作。将 Eyes &amp; Eyelid 设置为 Tracking 将重新启用模拟的眼球运动和眨眼。</p>
+<p>将 Mouth and Jaw 设置为 Animation 将禁用发音嘴型(visemes)，但仍会发送发音嘴型参数(visemes)。设置 Mouth and Jaw 将重新启用发音嘴型(visemes)。</p>
+<h2 id="avatar-parameter-driver">
+  Avatar Parameter Driver
+  <a class="anchor" href="#avatar-parameter-driver">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.7e68k4hlb6g0.webp" alt="img" /></p>
+<p>改变给定参数的值</p>
+<table>
+  <thead>
+      <tr>
+          <th>名字</th>
+          <th>Purpose(目的)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Add Parameter (按钮)</td>
+          <td>添加一个要改变的参数</td>
+      </tr>
+      <tr>
+          <td>Name</td>
+          <td>选择要改变的参数</td>
+      </tr>
+      <tr>
+          <td>Change Type</td>
+          <td>如何改变？</td>
+      </tr>
+      <tr>
+          <td>Value</td>
+          <td>要改变的值</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="playable-layer-control">
+  Playable Layer Control
+  <a class="anchor" href="#playable-layer-control">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-StateBehaviors/image.62mmysx318o0.webp" alt="img" /></p>
+<p>与Animator Layer Controller类似，不过是改变一个动画层的权重</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/zh-cn/docs/div/State_Behaviors.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span></span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#添加">添加</a></li>
+        <li><a href="#animator-layer-controller">Animator Layer Controller</a></li>
+        <li><a href="#animator-locomotion-control">Animator Locomotion Control</a></li>
+        <li><a href="#animator-temporary-pose-space">Animator Temporary Pose Space</a></li>
+        <li><a href="#animator-tracking-control">Animator Tracking Control</a></li>
+        <li><a href="#avatar-parameter-driver">Avatar Parameter Driver</a></li>
+        <li><a href="#playable-layer-control">Playable Layer Control</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="不同图层的状态可以同时发生，同一图层同时只能执行一个状态
+
+  图层
+  #
+
+点击&#43;可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
+
+  
+      
+          属性
+          描述
+      
+  
+  
+      
+          Weight(权重)
+          这一层的权重，0代表该层权重是0（该层不生效），1代表该层权重为1（该层中的动画能完全表现）
+      
+      
+          Mask(遮罩)
+          此层上使用的遮罩，可以限制动画的播放部位，例如只要播放上半身的动画，可以使用一个遮罩定义在上半身播放动画。设置后该图层上面会显示一个M的小图标
+      
+      
+          Blending
+          和其他层混合的模式
+      
+      
+          Override
+          覆盖上面的层中对应Mask的部位
+      
+      
+          Additive
+          会加在之前图层的动画之上
+      
+      
+          Sync
+          复用其他层中的状态机
+      
+      
+          IK Pass
+          反向动力学
+      
+  
+
+
+  状态
+  #
+
+状态是指在图层中的小方框，当拖入动画时会自动变成的“东西”
+新建一个图层，可以看到三个状态
+
+  
+      
+          状态名称
+          简述
+      
+  
+  
+      
+          Entry
+          入口，根据过渡进入默认状态
+      
+      
+          Any State
+          任意状态，只要条件满足，可任意跳转到过渡的状态
+      
+      
+          Exit
+          退出，返回到”Entry“
+      
+  
+
+
+  添加状态
+  #
+
+可以在空白处右键添加Empty(空状态)，也可以将动画文件拖到Animator窗口中添加一个状态
+如果当前在Project窗口选中了一个动画文件，可以通过右击右击的From Selected Clip创建一个状态，不过还是直接拖入更方便
+第一个创建的状态默认是橙色的，代表默认状态，Animator会在一开始就播放，如果状态中有动画，也会被播放
+
+  颜色
+  #
+
+橙色：默认状态，即进入就执行的动画
+灰色：可通过过渡达到条件执行的动画
+
+  状态设置
+  #
+
+每个状态都可以包含一个动画，处于该状态时，Animator组件所在的物体会播放动画，选中一个状态时，会有如下选项
+
+  
+      
+          名称
+          描述
+      
+  
+  
+      
+          Motion
+          状态绑定的动画（Animation）
+      
+      
+          速度(Speed)
+          动画播放的速度
+      
+      
+          乘数(Multiplier)
+          Speed * 指定参数（float）作为运行时的播放速度
+      
+      
+          Motion Time
+          单位化时间，指定参数（float，范围是0~1）作为动画播放时间(可使用此制作轮盘开关)
+      
+      
+          镜像(Mirror)
+          镜像播放，若打开”参数(Parameter)“：指定参数作（bool）为镜像的开关
+      
+      
+          周期偏移(Cycle Offset)
+          循环偏移量，可以用来同步循环的动画，使用单位化时间（范围是0~1），也可使用参数控制
+      
+      
+          Foot IK
+          只用于人形动画，角色的脚是否使用IK（反向动力学）
+      
+      
+          Write Default
+          进入下一个状态时重置此状态所作的更改（初始化该状态没有用到的参数为默认值）
+      
+  
+
+
+  Transition
+  #
+
+显示当前状态的过渡，选中后出现内容与在图层中选中一致">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/Summary/Layers/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="Animator Layers">
+  <meta property="og:description" content="不同图层的状态可以同时发生，同一图层同时只能执行一个状态
+图层 # 点击&#43;可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
+属性 描述 Weight(权重) 这一层的权重，0代表该层权重是0（该层不生效），1代表该层权重为1（该层中的动画能完全表现） Mask(遮罩) 此层上使用的遮罩，可以限制动画的播放部位，例如只要播放上半身的动画，可以使用一个遮罩定义在上半身播放动画。设置后该图层上面会显示一个M的小图标 Blending 和其他层混合的模式 Override 覆盖上面的层中对应Mask的部位 Additive 会加在之前图层的动画之上 Sync 复用其他层中的状态机 IK Pass 反向动力学 状态 # 状态是指在图层中的小方框，当拖入动画时会自动变成的“东西”
+新建一个图层，可以看到三个状态
+状态名称 简述 Entry 入口，根据过渡进入默认状态 Any State 任意状态，只要条件满足，可任意跳转到过渡的状态 Exit 退出，返回到”Entry“ 添加状态 # 可以在空白处右键添加Empty(空状态)，也可以将动画文件拖到Animator窗口中添加一个状态
+如果当前在Project窗口选中了一个动画文件，可以通过右击右击的From Selected Clip创建一个状态，不过还是直接拖入更方便
+第一个创建的状态默认是橙色的，代表默认状态，Animator会在一开始就播放，如果状态中有动画，也会被播放
+颜色 # 橙色：默认状态，即进入就执行的动画
+灰色：可通过过渡达到条件执行的动画
+状态设置 # 每个状态都可以包含一个动画，处于该状态时，Animator组件所在的物体会播放动画，选中一个状态时，会有如下选项
+名称 描述 Motion 状态绑定的动画（Animation） 速度(Speed) 动画播放的速度 乘数(Multiplier) Speed * 指定参数（float）作为运行时的播放速度 Motion Time 单位化时间，指定参数（float，范围是0~1）作为动画播放时间(可使用此制作轮盘开关) 镜像(Mirror) 镜像播放，若打开”参数(Parameter)“：指定参数作（bool）为镜像的开关 周期偏移(Cycle Offset) 循环偏移量，可以用来同步循环的动画，使用单位化时间（范围是0~1），也可使用参数控制 Foot IK 只用于人形动画，角色的脚是否使用IK（反向动力学） Write Default 进入下一个状态时重置此状态所作的更改（初始化该状态没有用到的参数为默认值） Transition # 显示当前状态的过渡，选中后出现内容与在图层中选中一致">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Animator Layers | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/Summary/Layers/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.b59afa28754f151b746f71dfb42e807de0a808d7a6b006adbb3387790c6205de.js" integrity="sha256-tZr6KHVPFRt0b3HftC6AfeCoCNemsAatuzOHeQxiBd4=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">首页</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/VRC_Avatar_Descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/PhysBones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/Contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/State_Behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Particle_System/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Trail_Renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Layers/" class="active">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_to_fbx/" class="">Mmd to Fbx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_upload/" class="">Mmd Upload</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Prepare/" class="">Prepare</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/sdk2_to_sdk3/" class="">Sdk2 to Sdk3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Upload/" class="">Upload</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/afk/" class="">Afk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Base/" class="">Base</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Playable_Layers/" class="">Playable Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/change_clothes/" class="">Change Clothes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/gesture/" class="">Gesture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_MMD/" class="">Set Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_object/" class="">Set Object</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/tied_bones/" class="">Tied Bones</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Add_BlenderShapes/" class="">Add Blender Shapes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/emote_anim/" class="">Emote Anim</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Pumkin_Tools/" class="">Pumkin Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/play_in_order/" class="">Play in Order</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/self_MMD/" class="">Self Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Shuffle_Playback/" class="">Shuffle Playback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Start/" class="">Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/Blender_change_head/" class="">Blender Change Head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/PC_Arm_Moving/" class="">PC Arm Moving</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/VRLabs_Marker/" class="">Vrlabs Marker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/References/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Animator Layers</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#图层">图层</a></li>
+        <li><a href="#状态">状态</a>
+          <ul>
+            <li><a href="#添加状态">添加状态</a></li>
+            <li><a href="#颜色">颜色</a></li>
+            <li><a href="#状态设置">状态设置</a></li>
+            <li><a href="#transition">Transition</a></li>
+          </ul>
+        </li>
+        <li><a href="#过渡">过渡</a>
+          <ul>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#condition">Condition</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>不同图层的状态可以同时发生，同一图层同时只能执行一个状态</p>
+<h2 id="图层">
+  图层
+  <a class="anchor" href="#%e5%9b%be%e5%b1%82">#</a>
+</h2>
+<p>点击<code>+</code>可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数</p>
+<table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Weight(权重)</td>
+          <td>这一层的权重，0代表该层权重是0（该层不生效），1代表该层权重为1（该层中的动画能完全表现）</td>
+      </tr>
+      <tr>
+          <td>Mask(遮罩)</td>
+          <td>此层上使用的遮罩，可以限制动画的播放部位，例如只要播放上半身的动画，可以使用一个遮罩定义在上半身播放动画。设置后该图层上面会显示一个<code>M</code>的小图标</td>
+      </tr>
+      <tr>
+          <td>Blending</td>
+          <td>和其他层混合的模式</td>
+      </tr>
+      <tr>
+          <td><em>Override</em></td>
+          <td>覆盖上面的层中对应Mask的部位</td>
+      </tr>
+      <tr>
+          <td><em>Additive</em></td>
+          <td>会加在之前图层的动画之上</td>
+      </tr>
+      <tr>
+          <td>Sync</td>
+          <td>复用其他层中的状态机</td>
+      </tr>
+      <tr>
+          <td>IK Pass</td>
+          <td>反向动力学</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="状态">
+  状态
+  <a class="anchor" href="#%e7%8a%b6%e6%80%81">#</a>
+</h2>
+<p>状态是指在图层中的<code>小方框</code>，当拖入动画时会自动变成的“东西”</p>
+<p>新建一个图层，可以看到三个状态</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">状态名称</th>
+          <th style="text-align: left">简述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Entry</td>
+          <td style="text-align: left">入口，根据过渡进入默认状态</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Any State</td>
+          <td style="text-align: left">任意状态，只要条件满足，可任意跳转到过渡的状态</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exit</td>
+          <td style="text-align: left">退出，返回到”Entry“</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="添加状态">
+  添加状态
+  <a class="anchor" href="#%e6%b7%bb%e5%8a%a0%e7%8a%b6%e6%80%81">#</a>
+</h3>
+<p>可以在空白处右键添加<code>Empty</code>(空状态)，也可以将动画文件拖到<code>Animator</code>窗口中添加一个状态</p>
+<p>如果当前在<code>Project</code>窗口选中了一个动画文件，可以通过右击右击的<code>From Selected Clip</code>创建一个状态，不过还是直接拖入更方便</p>
+<p><em>第一个创建的状态默认是橙色的，代表默认状态，<code>Animator</code>会在一开始就播放，如果状态中有动画，也会被播放</em></p>
+<h3 id="颜色">
+  颜色
+  <a class="anchor" href="#%e9%a2%9c%e8%89%b2">#</a>
+</h3>
+<p>橙色：默认状态，即进入就执行的动画</p>
+<p>灰色：可通过过渡达到条件执行的动画</p>
+<h3 id="状态设置">
+  状态设置
+  <a class="anchor" href="#%e7%8a%b6%e6%80%81%e8%ae%be%e7%bd%ae">#</a>
+</h3>
+<p>每个状态都可以包含一个动画，处于该状态时，<code>Animator</code>组件所在的物体会播放动画，选中一个状态时，会有如下选项</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Motion</td>
+          <td>状态绑定的动画（Animation）</td>
+      </tr>
+      <tr>
+          <td>速度(Speed)</td>
+          <td>动画播放的速度</td>
+      </tr>
+      <tr>
+          <td>乘数(Multiplier)</td>
+          <td>Speed * 指定参数（float）作为运行时的播放速度</td>
+      </tr>
+      <tr>
+          <td>Motion Time</td>
+          <td>单位化时间，指定参数（float，范围是0~1）作为动画播放时间(可使用此制作轮盘开关)</td>
+      </tr>
+      <tr>
+          <td>镜像(Mirror)</td>
+          <td>镜像播放，若打开”参数(Parameter)“：指定参数作（bool）为镜像的开关</td>
+      </tr>
+      <tr>
+          <td>周期偏移(Cycle Offset)</td>
+          <td>循环偏移量，可以用来同步循环的动画，使用单位化时间（范围是0~1），也可使用参数控制</td>
+      </tr>
+      <tr>
+          <td>Foot IK</td>
+          <td>只用于人形动画，角色的脚是否使用IK（反向动力学）</td>
+      </tr>
+      <tr>
+          <td>Write Default</td>
+          <td>进入下一个状态时重置此状态所作的更改（初始化该状态没有用到的参数为默认值）</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="transition">
+  Transition
+  <a class="anchor" href="#transition">#</a>
+</h3>
+<p>显示当前状态的过渡，选中后出现内容与在图层中选中一致</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Solo</td>
+          <td>选中则只生效当前过渡，其他将被禁用</td>
+      </tr>
+      <tr>
+          <td>Mute</td>
+          <td>选中则禁用当前过渡</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>如果同时选中<code>Solo</code>和<code>Mute</code>，<code>Mute</code>会优先生效</em></p>
+<h2 id="过渡">
+  过渡
+  <a class="anchor" href="#%e8%bf%87%e6%b8%a1">#</a>
+</h2>
+<p>表示状态之间的切换条件，一般会有一个或多个条件，用于从一个状态切换到另一个状态</p>
+<p>右击一个状态，<code>Make Transition</code>后选择另一个状态即可创建过渡，在过渡中可以添加相应条件</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Solo</td>
+          <td>选中则只生效当前过渡，其他将被禁用</td>
+      </tr>
+      <tr>
+          <td>Mute</td>
+          <td>选中则禁用当前过渡</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>如果同时选中<code>Solo</code>和<code>Mute</code>，<code>Mute</code>会优先生效</em></p>
+<p>多个出过渡时可调整位置(上下)以实现优先级(上方优先级高于下方)</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Name Field</td>
+          <td>名称框可以为过渡命名，用于区分俩个状态之间的多条过渡时很有用</td>
+      </tr>
+      <tr>
+          <td>Has Exit Time</td>
+          <td>是否有退出时间为条件</td>
+      </tr>
+  </tbody>
+</table>
+<p>退出时间是一种特殊的过渡条件，它没有依赖参数，而是根据设置的退出时间点作为条件进行状态转换。</p>
+<h3 id="settings">
+  Settings
+  <a class="anchor" href="#settings">#</a>
+</h3>
+<p>过渡的一些参数设置</p>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>退出时间(Exit Time)</td>
+          <td>如果勾选了<code>Has Exit Time</code>，该参数可以设置，设置动画退出的单位化时间(单位：上一状态动画长度，如为物体打开动画/空动画可当成以秒为单位)。<br />例如设置为0.75，代表动画播放到75%时为<code>true</code>，如果没有其他条件，会直接切换到下一个状态。<br />如果exit time小于1，那么状态每次循环到对应位置的时候（不管动画是否设置为循环，状态总是循环的），该条件都会为true。比如第一次播放到75%，第二次播放到75%……时退出时间条件都会为true。<br />如果exit time大于1，该条件只会检测一次。比如exit time为3.5，state的动画会在循环3次后，在播放到第4次的50%时为true。</td>
+      </tr>
+      <tr>
+          <td>固定持续时间(Fixed Duration)</td>
+          <td>勾选，下一项”过渡持续时间(Transition Duration)“以秒为单位<br />取消勾选，下一项”过渡持续时间(Transition Duration)“以（前一个状态的）百分数计数，1为100%</td>
+      </tr>
+      <tr>
+          <td>过渡持续时间(Transition Duration)</td>
+          <td>过渡的过渡时间。两个状态在转换时，一般不会瞬间从一个状态转换到另一个状态，而是会经过平滑混合，这个属性就是设置了平滑混合的时间</td>
+      </tr>
+      <tr>
+          <td>过度偏移(Transition Offset)</td>
+          <td>状态开始播放时的时间偏移。即后一个状态从何处开始，值为后一个状态的百分数，1为100%<br />例如设置为0.5，则转换到下一个状态时，会从50%的位置开始播放</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="过渡图">
+  过渡图
+  <a class="anchor" href="#%e8%bf%87%e6%b8%a1%e5%9b%be">#</a>
+</h4>
+<p>上面的参数不仅可以手动修改，也可以通过过渡图预览和修改</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.d1zgl4fkjnc.webp" alt="" /></p>
+<h4 id="中断源interruption-source">
+  中断源(Interruption Source)
+  <a class="anchor" href="#%e4%b8%ad%e6%96%ad%e6%ba%90interruption-source">#</a>
+</h4>
+<p>可以打断状态的过渡，但尽量避免使用，比较复杂</p>
+<p>例如以下图层</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3j6e8ox86fg0.webp" alt="" /></p>
+<h5 id="current-state当前状态">
+  Current State(当前状态)
+  <a class="anchor" href="#current-state%e5%bd%93%e5%89%8d%e7%8a%b6%e6%80%81">#</a>
+</h5>
+<p>默认情况下，当A到C的切换触发后，状态机开始切换到C，在切换到C之前无法被改变。但是，如果将A-&gt;C的过渡的<code>中断源(Interruption Source)</code>改为<code>Current State</code>，A-&gt;C的过渡就可以被A上的<strong>一些</strong>过渡中断</p>
+<p>在状态A上的过渡如下：</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3te260424lu0.webp" alt="" /></p>
+<p><code>一些</code>的原因：若勾选<code>Ordered Interruption</code>则只有优先级比A-&gt;B高的才能打断</p>
+<p>过渡的优先级从上到下依次降低，即优先级<code>A-&gt;B</code>&gt;<code>A-&gt;C</code>&gt;<code>A-&gt;D</code></p>
+<ul>
+<li>
+<p>如果勾选<code>Ordered Interruption</code></p>
+<p>如果此时A-&gt;B的切换触发，则会中断A-&gt;C，触发A-&gt;B</p>
+<p>但如果此时A-&gt;D的切换触发，不会中断A-&gt;C，还是触发A-&gt;C</p>
+</li>
+<li>
+<p>如果不勾选<code>Ordered Interruption</code></p>
+<p>此时A-&gt;B或A-&gt;D的切换触发都会中断A-&gt;C</p>
+<p>如果A-&gt;B和A-&gt;D同时触发，则会优先激活A-&gt;B，因为优先级较高</p>
+</li>
+</ul>
+<h5 id="next-state下一状态">
+  Next State(下一状态)
+  <a class="anchor" href="#next-state%e4%b8%8b%e4%b8%80%e7%8a%b6%e6%80%81">#</a>
+</h5>
+<p>如果将A-&gt;B的过渡的<code>中断源(Interruption Source)</code>改为<code>Next State</code>，A-&gt;B和A-&gt;D就不能中断A-&gt;C了</p>
+<p>如果我们激活A-&gt;B后，又激活B-&gt;D，那么A-&gt;C的过渡会被中断，转而切换到D</p>
+<p>状态B上的过渡顺序也会有影响，但此时<code>Ordered Interruption</code>无法勾选(因为A-&gt;B是在状态A上，不在状态B上，不参与B的排序)。状态B上的过渡顺序会决定同时触发时会使用哪一个过渡，例如下图过渡</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.1xdggp8q1bq8.webp" alt="" /></p>
+<p>如果B-&gt;C和B-&gt;D同时触发，则优先执行B-&gt;C</p>
+<h5 id="current-state-then-next-state当前状态然后下一状态">
+  Current State Then Next State(当前状态然后下一状态)
+  <a class="anchor" href="#current-state-then-next-state%e5%bd%93%e5%89%8d%e7%8a%b6%e6%80%81%e7%84%b6%e5%90%8e%e4%b8%8b%e4%b8%80%e7%8a%b6%e6%80%81">#</a>
+</h5>
+<p>如果将A-&gt;B的过渡的<code>中断源(Interruption Source)</code>改为<code>Current State Then Next State</code>，则状态A与状态B的过渡都会被考虑在内</p>
+<p>如果A-&gt;B切换时，同时激活的A-&gt;C, A-&gt;D, B-&gt;C和B-&gt;D（不勾选<code>Ordered Interruption</code>）</p>
+<p>因<code>Current State Then Next State(当前状态然后下一状态)</code>，先看状态A的过渡，由于A-&gt;C的优先级比A-&gt;D高，则将执行A-&gt;C，因结果已出，不用再考虑下一状态B</p>
+<h5 id="current-state-then-next-state当前状态然后下一状态-1">
+  Current State Then Next State(当前状态然后下一状态)
+  <a class="anchor" href="#current-state-then-next-state%e5%bd%93%e5%89%8d%e7%8a%b6%e6%80%81%e7%84%b6%e5%90%8e%e4%b8%8b%e4%b8%80%e7%8a%b6%e6%80%81-1">#</a>
+</h5>
+<p>与上一个相反</p>
+<h5 id="总结">
+  总结
+  <a class="anchor" href="#%e6%80%bb%e7%bb%93">#</a>
+</h5>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ordered Interruption</td>
+          <td>优先级高于当前过渡才可以打断</td>
+      </tr>
+      <tr>
+          <td>无(None)</td>
+          <td>不可打断</td>
+      </tr>
+      <tr>
+          <td>Current State</td>
+          <td>前一个状态开始的状态过渡可以打断正在进行的状态过渡</td>
+      </tr>
+      <tr>
+          <td>Next State</td>
+          <td>从后一个状态开始的状态过渡可以打断正在进行的状态</td>
+      </tr>
+      <tr>
+          <td>Current State Then Next State</td>
+          <td>决定哪个动画State上的过渡节点优先权更高，先看前一个State的优先级如果没有被触发，再看后一个State的优先级，来达到不同的融合与打断效果</td>
+      </tr>
+      <tr>
+          <td>Next State Then Current State</td>
+          <td>决定哪个动画State上的过渡节点优先权更高，与上一个相反</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="condition">
+  Condition
+  <a class="anchor" href="#condition">#</a>
+</h3>
+<p>过渡条件，一个过渡可以有一个条件，也可以有多个条件，甚至没有条件</p>
+<ul>
+<li>
+<p>如果没有条件，但是勾选了<code>Has Exit Time</code>，那么<code>Exit Time</code>会被作为状态退出的条件，到达<code>Exit Time</code>时，会切换到下一个状态</p>
+</li>
+<li>
+<p>如果有一个或多个条件，需要同时满足这些条件才能切换到下一个状态</p>
+</li>
+</ul>
+<p>条件可以通过参数设置，具体如下</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数类型</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Int型</td>
+          <td>可选择Greater（&gt;）、Less（&lt;）、Equals（==）、NotEqual（!=）指定的数作为过渡条件</td>
+      </tr>
+      <tr>
+          <td>Float型</td>
+          <td>可选择Greater（&gt;）、Less（&lt;）指定的数作为过渡条件</td>
+      </tr>
+      <tr>
+          <td>Bool型</td>
+          <td>可选择指定值（true or false）作为过渡条件</td>
+      </tr>
+      <tr>
+          <td>Trigger</td>
+          <td>条件为true时触发状态过渡</td>
+      </tr>
+  </tbody>
+</table>
+<p>如果<code>Has Exit Time</code>勾选了，并且过渡还有一个或多个条件，那么过渡需要同时满足到达<code>Exit Time</code>，同时条件全为true，才会切换到下一个state</p>
+<p><strong>一个过渡至少要有一个条件（Has Exit Time可以作为一个条件），否则过渡将会被忽略(不会被执行进入下一个状态)</strong></p>
+<p><em>注：Trigger貌似在VRChat中没有作用，至少我不知道</em></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/zh-cn/docs/Summary/Layers.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span></span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#图层">图层</a></li>
+        <li><a href="#状态">状态</a>
+          <ul>
+            <li><a href="#添加状态">添加状态</a></li>
+            <li><a href="#颜色">颜色</a></li>
+            <li><a href="#状态设置">状态设置</a></li>
+            <li><a href="#transition">Transition</a></li>
+          </ul>
+        </li>
+        <li><a href="#过渡">过渡</a>
+          <ul>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#condition">Condition</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

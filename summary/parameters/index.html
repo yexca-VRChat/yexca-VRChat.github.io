@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="过渡的条件可使用官方数值，只需要在”动画器-参数”添加类型和名字与官方数值相同的参数即可
+
+  一、数值类型
+  #
+
+在”动画器“中添加参数有四种类型
+
+
+Float ：浮点数，可以理解为小数
+
+
+Int ：整数型，可以理解为整数
+
+
+Bool ：布尔型，只有”True“和”False“两种取值
+
+
+Trigger ：触发器，和布尔型很像，但只能被设为true，一旦被过渡使用就会自动被设为false(好像在VRC中没用？)
+
+
+下表为VRChat数值类型(一个模型的“数值”上限为“256 bits”)
+
+  
+      
+          数值类型
+          取值范围
+          存储占用
+          备注
+      
+  
+  
+      
+          int
+          0 ~ 255
+          8 bits
+          Unsigned 8-bit int.
+      
+      
+          float
+          -1.0 ~ 1.0
+          8 bits
+          Signed 8-bit 
+  minifloat
+      
+      
+          bool
+          True or False
+          1 bit
+          
+      
+  
+
+
+如果要做开关，动画器-参数中参数名字与类型要与VRC数值中一模一样
+
+
+  二、官方数值总览
+  #
+
+(以下表格中文为我自己翻译，可能会有错误，仅翻译可能有用或我用过的参数)
+
+  
+      
+          Name(名字)
+          Description(描述)
+          Type(类型)
+          Sync(同步)
+      
+  
+  
+      
+          IsLocal
+          True if the avatar is being worn locally, false otherwise
+          Bool
+          None
+      
+      
+          
+  Viseme(口型)
+          
+  Oculus viseme index (0-14). When using Jawbone/Jawflap, range is 0-100 indicating volume
+          Int
+          Speech
+      
+      
+          Voice
+          Microphone volume (0.0-1.0)
+          Float
+          Speech
+      
+      
+          
+  GestureLeft(左手手势)
+          Gesture from L hand control (0-7)
+          Int
+          IK
+      
+      
+          
+  GestureRight(右手手势)
+          Gesture from R hand control (0-7)
+          Int
+          IK
+      
+      
+          GestureLeftWeight
+          Analog trigger L (0.0-1.0)†
+          Float
+          IK
+      
+      
+          GestureRightWeight
+          Analog trigger R (0.0-1.0)†
+          Float
+          IK
+      
+      
+          AngularY
+          Angular velocity on the Y axis
+          Float
+          IK
+      
+      
+          VelocityX(X方向速度)
+          Lateral move speed in m/s
+          Float
+          IK
+      
+      
+          VelocityY(Y方向速度)
+          Vertical move speed in m/s
+          Float
+          IK
+      
+      
+          VelocityZ(Z方向速度)
+          Forward move speed in m/s
+          Float
+          IK
+      
+      
+          Upright(高度)
+          How “upright” you are. 0 is prone, 1 is standing straight up
+          Float
+          IK
+      
+      
+          Grounded(地面)
+          True if player touching ground(如果跳跃则为false)
+          Bool
+          IK
+      
+      
+          Seated
+          True if player in station
+          Bool
+          IK
+      
+      
+          AFK
+          Is player unavailable (HMD proximity sensor / End key)
+          Bool
+          IK
+      
+      
+          Expression1 – Expression16
+          User defined param, Int (0–255) or Float (-1.0–1.0)
+          Int / Float
+          IK or Playable
+      
+      
+          
+  TrackingType
+          See description below
+          Int
+          Playable
+      
+      
+          VRMode
+          Returns 1 if the user is in VR, 0 if they are not
+          Int
+          IK
+      
+      
+          MuteSelf
+          Returns true if the user has muted themselves, false if unmuted
+          Bool
+          Playable
+      
+      
+          InStation
+          Returns true if the user is in a station, false if not
+          Bool
+          IK
+      
+  
+
+
+  三、手势对应数值
+  #
+
+用于制作手势触发动画">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/summary/parameters/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="Parameters">
+  <meta property="og:description" content="过渡的条件可使用官方数值，只需要在”动画器-参数”添加类型和名字与官方数值相同的参数即可
+一、数值类型 # 在”动画器“中添加参数有四种类型
+Float ：浮点数，可以理解为小数
+Int ：整数型，可以理解为整数
+Bool ：布尔型，只有”True“和”False“两种取值
+Trigger ：触发器，和布尔型很像，但只能被设为true，一旦被过渡使用就会自动被设为false(好像在VRC中没用？)
+下表为VRChat数值类型(一个模型的“数值”上限为“256 bits”)
+数值类型 取值范围 存储占用 备注 int 0 ~ 255 8 bits Unsigned 8-bit int. float -1.0 ~ 1.0 8 bits Signed 8-bit minifloat bool True or False 1 bit 如果要做开关，动画器-参数中参数名字与类型要与VRC数值中一模一样
+二、官方数值总览 # (以下表格中文为我自己翻译，可能会有错误，仅翻译可能有用或我用过的参数)
+Name(名字) Description(描述) Type(类型) Sync(同步) IsLocal True if the avatar is being worn locally, false otherwise Bool None Viseme(口型) Oculus viseme index (0-14). When using Jawbone/Jawflap, range is 0-100 indicating volume Int Speech Voice Microphone volume (0.0-1.0) Float Speech GestureLeft(左手手势) Gesture from L hand control (0-7) Int IK GestureRight(右手手势) Gesture from R hand control (0-7) Int IK GestureLeftWeight Analog trigger L (0.0-1.0)† Float IK GestureRightWeight Analog trigger R (0.0-1.0)† Float IK AngularY Angular velocity on the Y axis Float IK VelocityX(X方向速度) Lateral move speed in m/s Float IK VelocityY(Y方向速度) Vertical move speed in m/s Float IK VelocityZ(Z方向速度) Forward move speed in m/s Float IK Upright(高度) How “upright” you are. 0 is prone, 1 is standing straight up Float IK Grounded(地面) True if player touching ground(如果跳跃则为false) Bool IK Seated True if player in station Bool IK AFK Is player unavailable (HMD proximity sensor / End key) Bool IK Expression1 – Expression16 User defined param, Int (0–255) or Float (-1.0–1.0) Int / Float IK or Playable TrackingType See description below Int Playable VRMode Returns 1 if the user is in VR, 0 if they are not Int IK MuteSelf Returns true if the user has muted themselves, false if unmuted Bool Playable InStation Returns true if the user is in a station, false if not Bool IK 三、手势对应数值 # 用于制作手势触发动画">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Parameters | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://vrchat.yexca.net/summary/parameters/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="这里有什么东西呢？" aria-label="这里有什么东西呢？" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/vrc_avatar_descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/physbones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/state_behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/particle_system/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/trail_renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/parameters/" class="active">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/prepare/" class="">上传前准备</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/upload/" class="">成品模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_to_fbx/" class="">MMD 模型转为 FBX</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_upload/" class="">MMD 模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/sdk2_to_sdk3/" class="">SDK2 转为 SDK3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/playable_layers/" class="">添加默认图层与菜单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/base/" class="">Base 层-蹲姿，趴姿</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/afk/" class="">Action 层 - AFK</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/switch/" class="">FX 层 - 物品开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/tied_bones/" class="">物体绑骨</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/change_clothes/" class="">换衣服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_object/" class="">固定世界物品</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_mmd/" class="">固定世界 MMD</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/gesture/" class="">手势开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/emote_anim/" class="">添加手势表情</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/add_blendershapes/" class="">Blender 添加形态键</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/pumkin_tools/" class="">一键复制</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/self_mmd/" class="">自身跳 MMD 舞蹈</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/shuffle_playback/" class="">随机播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/play_in_order/" class="">顺序播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/start/" class="">出场动画</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/vrlabs_marker/" class="">添加一个可以写字的笔</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/blender_change_head/" class="">Blender 换头</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/pc_arm_moving/" class="">PC 下移动手</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/about/" class="">关于</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/references/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/yexca-VRChat/yexca-VRChat.github.io"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Parameters</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一数值类型">一、数值类型</a></li>
+        <li><a href="#二官方数值总览">二、官方数值总览</a></li>
+        <li><a href="#三手势对应数值">三、手势对应数值</a></li>
+        <li><a href="#四口型对应值">四、口型对应值</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>过渡的条件可使用官方数值，只需要在”动画器-参数”添加类型和名字与官方数值相同的参数即可</p>
+<h2 id="一数值类型">
+  一、数值类型
+  <a class="anchor" href="#%e4%b8%80%e6%95%b0%e5%80%bc%e7%b1%bb%e5%9e%8b">#</a>
+</h2>
+<p>在”动画器“中添加参数有四种类型</p>
+<ul>
+<li>
+<p>Float ：浮点数，可以理解为小数</p>
+</li>
+<li>
+<p>Int ：整数型，可以理解为整数</p>
+</li>
+<li>
+<p>Bool ：布尔型，只有”True“和”False“两种取值</p>
+</li>
+<li>
+<p>Trigger ：触发器，和布尔型很像，但只能被设为true，一旦被过渡使用就会自动被设为false(好像在VRC中没用？)</p>
+</li>
+</ul>
+<p>下表为VRChat数值类型(一个模型的“数值”上限为“256 bits”)</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">数值类型</th>
+          <th style="text-align: left">取值范围</th>
+          <th style="text-align: left">存储占用</th>
+          <th style="text-align: left">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">int</td>
+          <td style="text-align: left"><code>0</code> ~ <code>255</code></td>
+          <td style="text-align: left">8 bits</td>
+          <td style="text-align: left">Unsigned 8-bit int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">float</td>
+          <td style="text-align: left"><code>-1.0</code> ~ <code>1.0</code></td>
+          <td style="text-align: left">8 bits</td>
+          <td style="text-align: left">Signed 8-bit 
+  <a href="https://en.wikipedia.org/wiki/Minifloat">minifloat</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">bool</td>
+          <td style="text-align: left"><code>True</code> or <code>False</code></td>
+          <td style="text-align: left">1 bit</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>如果要做开关，动画器-参数中参数名字与类型要与VRC数值中一模一样</p>
+</blockquote>
+<h2 id="二官方数值总览">
+  二、官方数值总览
+  <a class="anchor" href="#%e4%ba%8c%e5%ae%98%e6%96%b9%e6%95%b0%e5%80%bc%e6%80%bb%e8%a7%88">#</a>
+</h2>
+<p>(以下表格中文为我自己翻译，可能会有错误，仅翻译可能有用或我用过的参数)</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Name(名字)</th>
+          <th style="text-align: left">Description(描述)</th>
+          <th style="text-align: left">Type(类型)</th>
+          <th style="text-align: left">Sync(同步)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">IsLocal</td>
+          <td style="text-align: left">True if the avatar is being worn locally, false otherwise</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">None</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">
+  <a href="https://docs.vrchat.com/docs/animator-parameters#viseme-values">Viseme</a>(口型)</td>
+          <td style="text-align: left">
+  <a href="https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference">Oculus viseme index</a> (<code>0-14</code>). When using Jawbone/Jawflap, range is <code>0-100</code> indicating volume</td>
+          <td style="text-align: left">Int</td>
+          <td style="text-align: left">Speech</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Voice</td>
+          <td style="text-align: left">Microphone volume (<code>0.0-1.0</code>)</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">Speech</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">
+  <a href="https://docs.vrchat.com/docs/animator-parameters#gestureleft-and-gestureright-values">GestureLeft</a>(左手手势)</td>
+          <td style="text-align: left">Gesture from L hand control (0-7)</td>
+          <td style="text-align: left">Int</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">
+  <a href="https://docs.vrchat.com/docs/animator-parameters#gestureleft-and-gestureright-values">GestureRight</a>(右手手势)</td>
+          <td style="text-align: left">Gesture from R hand control (0-7)</td>
+          <td style="text-align: left">Int</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">GestureLeftWeight</td>
+          <td style="text-align: left">Analog trigger L (0.0-1.0)†</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">GestureRightWeight</td>
+          <td style="text-align: left">Analog trigger R (0.0-1.0)†</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AngularY</td>
+          <td style="text-align: left">Angular velocity on the Y axis</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">VelocityX(X方向速度)</td>
+          <td style="text-align: left">Lateral move speed in m/s</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">VelocityY(Y方向速度)</td>
+          <td style="text-align: left">Vertical move speed in m/s</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">VelocityZ(Z方向速度)</td>
+          <td style="text-align: left">Forward move speed in m/s</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Upright(高度)</td>
+          <td style="text-align: left">How “upright” you are. 0 is prone, 1 is standing straight up</td>
+          <td style="text-align: left">Float</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Grounded(地面)</td>
+          <td style="text-align: left">True if player touching ground(如果跳跃则为false)</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Seated</td>
+          <td style="text-align: left">True if player in station</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AFK</td>
+          <td style="text-align: left">Is player unavailable (HMD proximity sensor / End key)</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Expression1 – Expression16</td>
+          <td style="text-align: left">User defined param, Int (<code>0</code>–<code>255</code>) or Float (<code>-1.0</code>–<code>1.0</code>)</td>
+          <td style="text-align: left">Int / Float</td>
+          <td style="text-align: left">IK or Playable</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">
+  <a href="https://docs.vrchat.com/docs/animator-parameters#trackingtype-parameter">TrackingType</a></td>
+          <td style="text-align: left">See description below</td>
+          <td style="text-align: left">Int</td>
+          <td style="text-align: left">Playable</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">VRMode</td>
+          <td style="text-align: left">Returns <code>1</code> if the user is in VR, <code>0</code> if they are not</td>
+          <td style="text-align: left">Int</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MuteSelf</td>
+          <td style="text-align: left">Returns <code>true</code> if the user has muted themselves, <code>false</code> if unmuted</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">Playable</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">InStation</td>
+          <td style="text-align: left">Returns <code>true</code> if the user is in a station, <code>false</code> if not</td>
+          <td style="text-align: left">Bool</td>
+          <td style="text-align: left">IK</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="三手势对应数值">
+  三、手势对应数值
+  <a class="anchor" href="#%e4%b8%89%e6%89%8b%e5%8a%bf%e5%af%b9%e5%ba%94%e6%95%b0%e5%80%bc">#</a>
+</h2>
+<p>用于制作手势触发动画</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Index (数值)</th>
+          <th style="text-align: left">Gesture (手势)</th>
+          <th>PC按键</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Neutral (自然)</td>
+          <td>Shift+F1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Fist (握拳)</td>
+          <td>Shift+F2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">HandOpen (张开手)</td>
+          <td>Shift+F3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">fingerpoint (指)</td>
+          <td>Shift+F4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Victory (剪刀手)</td>
+          <td>Shift+F5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">RockNRoll (我爱你)</td>
+          <td>Shift+F6</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">HandGun (手枪)</td>
+          <td>Shift+F7</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">ThumbsUp (点赞)</td>
+          <td>Shift+F8</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>注：PC 按键：左 Shift 为左手，右 Shift为 右手</p>
+</blockquote>
+<h2 id="四口型对应值">
+  四、口型对应值
+  <a class="anchor" href="#%e5%9b%9b%e5%8f%a3%e5%9e%8b%e5%af%b9%e5%ba%94%e5%80%bc">#</a>
+</h2>
+<p>口型参考：
+  <a href="https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference">Viseme Reference: Unity | Oculus Developers</a></p>
+<p>可用于制作说话触发动画</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Viseme Parameter</th>
+          <th style="text-align: left">Viseme</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left"><code>sil</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left"><code>PP</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left"><code>FF</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left"><code>TH</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left"><code>DD</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left"><code>kk</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left"><code>CH</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left"><code>SS</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left"><code>nn</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left"><code>RR</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left"><code>aa</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">11</td>
+          <td style="text-align: left"><code>E</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left"><code>ih</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left"><code>oh</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left"><code>ou</code></td>
+      </tr>
+  </tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/Summary/Parameters.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一数值类型">一、数值类型</a></li>
+        <li><a href="#二官方数值总览">二、官方数值总览</a></li>
+        <li><a href="#三手势对应数值">三、手势对应数值</a></li>
+        <li><a href="#四口型对应值">四、口型对应值</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

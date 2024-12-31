@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  添加描述文件
+  #
+
+在“层级”中选中模型名字即可在右方组件搜索添加“VRC Avatar Descriptor”
+
+  
+第一个为VRC的描述，第二个为蓝图
+
+  一、View
+  #
+
+
+  
+用于调整视角球，即在游戏中看到的位置，一般放在两眼中间
+点击“Edit”即可在“场景”中调整位置，调整完成后点击“Return”
+
+  二、LipSync
+  #
+
+定义后模型可在开麦说话时开口
+
+  
+一般点击“Auto Detect!”可自动添加，如无法正常识别请手动添加
+一般“Mode”为第四个“Viseme Blend Shape” ，然后将模型的“Body”或“Face”拖入“Face Mesh” ，一般情况如下(如识别不出请手动选择）
+
+  
+若没有以上东西请禁用，即“Mode”选“默认”，或者自己研究骨骼实现
+
+  三、Eye Look
+  #
+
+
+  
+眼部相关，点击“Enable”开始更改
+
+  General
+  #
+
+全局设定眼部移动
+
+  
+“Calm-Excited”影响眨眼的频率
+“Shy-Confident”影响自己的模型看向其他玩家模型的频率以及看向其他玩家时视线停留的时间
+
+  Eyes
+  #
+
+
+  Transforms
+  #
+
+定义眼骨的位置
+
+  
+找到相应骨骼拖入即可，如没有请跳过
+
+  Rotation States
+  #
+
+定义眼部骨骼旋转的范围，只有当上一项填入眼骨才可用
+
+  
+定义向前，上，下，左，右看时眼睛的移动
+点击“Preview”可进行编辑，可以在场景中进行旋转，点击“X”轴左方的链子可分别定义左右眼，当调整好后点击“Return”保存
+
+  Eyelids
+  #
+
+定义闭眼，向上看和向下看
+
+  
+一般“Eyelid Type”选择“Blendshapes”，然后将“Body”或“Face”拖入“Eyelids Mesh”
+在“Blendshapes”可定义闭眼与向上看和向下看
+**注意：**此处向上看与向上看与上一项“Eyes-Rotation”中的向上看和向下看是相同的，若使用上方定义可选择“-none-”
+游戏中眼部出现异常可在这个模块调整，图省事可直接“disable”">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/div/VRC_Avatar_Descriptor/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="VRC Avatar Descriptor">
+  <meta property="og:description" content="添加描述文件 # 在“层级”中选中模型名字即可在右方组件搜索添加“VRC Avatar Descriptor”
+第一个为VRC的描述，第二个为蓝图
+一、View # 用于调整视角球，即在游戏中看到的位置，一般放在两眼中间
+点击“Edit”即可在“场景”中调整位置，调整完成后点击“Return”
+二、LipSync # 定义后模型可在开麦说话时开口
+一般点击“Auto Detect!”可自动添加，如无法正常识别请手动添加
+一般“Mode”为第四个“Viseme Blend Shape” ，然后将模型的“Body”或“Face”拖入“Face Mesh” ，一般情况如下(如识别不出请手动选择）
+若没有以上东西请禁用，即“Mode”选“默认”，或者自己研究骨骼实现
+三、Eye Look # 眼部相关，点击“Enable”开始更改
+General # 全局设定眼部移动
+“Calm-Excited”影响眨眼的频率
+“Shy-Confident”影响自己的模型看向其他玩家模型的频率以及看向其他玩家时视线停留的时间
+Eyes # Transforms # 定义眼骨的位置
+找到相应骨骼拖入即可，如没有请跳过
+Rotation States # 定义眼部骨骼旋转的范围，只有当上一项填入眼骨才可用
+定义向前，上，下，左，右看时眼睛的移动
+点击“Preview”可进行编辑，可以在场景中进行旋转，点击“X”轴左方的链子可分别定义左右眼，当调整好后点击“Return”保存
+Eyelids # 定义闭眼，向上看和向下看
+一般“Eyelid Type”选择“Blendshapes”，然后将“Body”或“Face”拖入“Eyelids Mesh”
+在“Blendshapes”可定义闭眼与向上看和向下看
+**注意：**此处向上看与向上看与上一项“Eyes-Rotation”中的向上看和向下看是相同的，若使用上方定义可选择“-none-”
+游戏中眼部出现异常可在这个模块调整，图省事可直接“disable”">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>VRC Avatar Descriptor | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/div/VRC_Avatar_Descriptor/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.b59afa28754f151b746f71dfb42e807de0a808d7a6b006adbb3387790c6205de.js" integrity="sha256-tZr6KHVPFRt0b3HftC6AfeCoCNemsAatuzOHeQxiBd4=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">首页</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/VRC_Avatar_Descriptor/" class="active">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/PhysBones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/Contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/State_Behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Particle_System/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Trail_Renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_to_fbx/" class="">Mmd to Fbx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_upload/" class="">Mmd Upload</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Prepare/" class="">Prepare</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/sdk2_to_sdk3/" class="">Sdk2 to Sdk3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Upload/" class="">Upload</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/afk/" class="">Afk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Base/" class="">Base</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Playable_Layers/" class="">Playable Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/change_clothes/" class="">Change Clothes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/gesture/" class="">Gesture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_MMD/" class="">Set Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_object/" class="">Set Object</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/tied_bones/" class="">Tied Bones</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Add_BlenderShapes/" class="">Add Blender Shapes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/emote_anim/" class="">Emote Anim</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Pumkin_Tools/" class="">Pumkin Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/play_in_order/" class="">Play in Order</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/self_MMD/" class="">Self Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Shuffle_Playback/" class="">Shuffle Playback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Start/" class="">Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/Blender_change_head/" class="">Blender Change Head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/PC_Arm_Moving/" class="">PC Arm Moving</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/VRLabs_Marker/" class="">Vrlabs Marker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/References/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>VRC Avatar Descriptor</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#添加描述文件">添加描述文件</a></li>
+        <li><a href="#一view">一、View</a></li>
+        <li><a href="#二lipsync">二、LipSync</a></li>
+        <li><a href="#三eye-look">三、Eye Look</a>
+          <ul>
+            <li><a href="#general">General</a></li>
+            <li><a href="#eyes">Eyes</a></li>
+            <li><a href="#eyelids">Eyelids</a></li>
+          </ul>
+        </li>
+        <li><a href="#playable-layers">Playable Layers</a></li>
+        <li><a href="#lower-body">Lower Body</a></li>
+        <li><a href="#expressions">Expressions</a></li>
+        <li><a href="#colliders">Colliders</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="添加描述文件">
+  添加描述文件
+  <a class="anchor" href="#%e6%b7%bb%e5%8a%a0%e6%8f%8f%e8%bf%b0%e6%96%87%e4%bb%b6">#</a>
+</h2>
+<p>在“层级”中选中模型名字即可在右方组件搜索添加“VRC Avatar Descriptor”</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.48d8ypvvpq00.webp" alt="img" /></p>
+<p>第一个为VRC的描述，第二个为蓝图</p>
+<h2 id="一view">
+  一、View
+  <a class="anchor" href="#%e4%b8%80view">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.3i0xx2om69e0.webp" alt="img" /></p>
+<p>用于调整视角球，即在游戏中看到的位置，一般放在两眼中间</p>
+<p>点击“Edit”即可在“场景”中调整位置，调整完成后点击“Return”</p>
+<h2 id="二lipsync">
+  二、LipSync
+  <a class="anchor" href="#%e4%ba%8clipsync">#</a>
+</h2>
+<p>定义后模型可在开麦说话时开口</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.40e4lutgnbi0.webp" alt="img" /></p>
+<p>一般点击“Auto Detect!”可自动添加，如无法正常识别请手动添加</p>
+<p>一般“Mode”为第四个“Viseme Blend Shape” ，然后将模型的“Body”或“Face”拖入“Face Mesh” ，一般情况如下(如识别不出请手动选择）</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.5mxy376p4sk0.webp" alt="img" /></p>
+<p>若没有以上东西请禁用，即“Mode”选“默认”，或者自己研究骨骼实现</p>
+<h2 id="三eye-look">
+  三、Eye Look
+  <a class="anchor" href="#%e4%b8%89eye-look">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.12j6dlfdgibk.webp" alt="img" /></p>
+<p>眼部相关，点击“Enable”开始更改</p>
+<h3 id="general">
+  General
+  <a class="anchor" href="#general">#</a>
+</h3>
+<p>全局设定眼部移动</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.2nr8oejxht60.webp" alt="img" /></p>
+<p>“Calm-Excited”影响眨眼的频率</p>
+<p>“Shy-Confident”影响自己的模型看向其他玩家模型的频率以及看向其他玩家时视线停留的时间</p>
+<h3 id="eyes">
+  Eyes
+  <a class="anchor" href="#eyes">#</a>
+</h3>
+<h4 id="transforms">
+  Transforms
+  <a class="anchor" href="#transforms">#</a>
+</h4>
+<p>定义眼骨的位置</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.3fvueycbkhw0.webp" alt="img" /></p>
+<p>找到相应骨骼拖入即可，如没有请跳过</p>
+<h4 id="rotation-states">
+  Rotation States
+  <a class="anchor" href="#rotation-states">#</a>
+</h4>
+<p>定义眼部骨骼旋转的范围，只有当上一项填入眼骨才可用</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.5lbk2uslvks0.webp" alt="img" /></p>
+<p>定义向前，上，下，左，右看时眼睛的移动</p>
+<p>点击“Preview”可进行编辑，可以在场景中进行旋转，点击“X”轴左方的链子可分别定义左右眼，当调整好后点击“Return”保存</p>
+<h3 id="eyelids">
+  Eyelids
+  <a class="anchor" href="#eyelids">#</a>
+</h3>
+<p>定义闭眼，向上看和向下看</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.2ljvn9o52940.webp" alt="img" /></p>
+<p>一般“Eyelid Type”选择“Blendshapes”，然后将“Body”或“Face”拖入“Eyelids Mesh”</p>
+<p>在“Blendshapes”可定义闭眼与向上看和向下看</p>
+<p>**注意：**此处向上看与向上看与上一项“Eyes-Rotation”中的向上看和向下看是相同的，若使用上方定义可选择“-none-”</p>
+<p>游戏中眼部出现异常可在这个模块调整，图省事可直接“disable”</p>
+<h2 id="playable-layers">
+  Playable Layers
+  <a class="anchor" href="#playable-layers">#</a>
+</h2>
+<p>在 SDK3 的 Avatar Descriptor 一共有五个层，分别为</p>
+<ul>
+<li>Base 或称Locomotion层，控制模型的蹲姿，趴姿等</li>
+<li>Additive Base层的附加，例如制作呼吸动画</li>
+<li>Gesture 手势层，手势动作制作，或者用于“空闲动画”，例如摇摆尾巴、拍打翅膀或移动耳朵</li>
+<li>Action 动作层，例如MMD舞蹈放此层</li>
+<li>FX 控制物品的开关，手势表情也在此层</li>
+</ul>
+<p>此外，还有附加的三个层，分别为（此部分如需了解请看“
+  <a href="https://docs.vrchat.com/docs/playable-layers#additional-poses">官方文档</a>”）</p>
+<ul>
+<li>T-Pose</li>
+<li>IK Pose</li>
+<li>Sitting Pose</li>
+</ul>
+<h2 id="lower-body">
+  Lower Body
+  <a class="anchor" href="#lower-body">#</a>
+</h2>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.1mkbsgxttbuo.webp" alt="img" /></p>
+<p>第一个：头部有轻微移动会有小碎步的效果</p>
+<p>第二个：全身追踪时是否启用Locomotion</p>
+<h2 id="expressions">
+  Expressions
+  <a class="anchor" href="#expressions">#</a>
+</h2>
+<p>
+  <a href="/Summary/Parameters">数值</a></p>
+<p>
+  <a href="/Summary/Menu.md">菜单</a></p>
+<h2 id="colliders">
+  Colliders
+  <a class="anchor" href="#colliders">#</a>
+</h2>
+<p>新SDK3特有，用于定义头部、身体、手脚的碰撞</p>
+<p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/03-AvatarDescriptor/image.775z0ziwkxc0.webp" alt="img" /></p>
+<p>点击“Edit”即可定义位置与大小，可在场景中进行编辑</p>
+<p>点击左方的链条即可分别设置左右位置</p>
+<p>此处设置的不仅是碰撞体积也是交互系统发送端的大小</p>
+<p>具体参考：
+  <a href="/dynamics/Contacts.md">交互(Contacts)简介</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/zh-cn/docs/div/VRC_Avatar_Descriptor.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span></span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#添加描述文件">添加描述文件</a></li>
+        <li><a href="#一view">一、View</a></li>
+        <li><a href="#二lipsync">二、LipSync</a></li>
+        <li><a href="#三eye-look">三、Eye Look</a>
+          <ul>
+            <li><a href="#general">General</a></li>
+            <li><a href="#eyes">Eyes</a></li>
+            <li><a href="#eyelids">Eyelids</a></li>
+          </ul>
+        </li>
+        <li><a href="#playable-layers">Playable Layers</a></li>
+        <li><a href="#lower-body">Lower Body</a></li>
+        <li><a href="#expressions">Expressions</a></li>
+        <li><a href="#colliders">Colliders</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

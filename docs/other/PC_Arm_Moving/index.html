@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Two Axis Puppet
+
+  动画
+  #
+
+My Pan：
+  PC_Arm_Moving.unitypackage
+原包我已经找不到了，而且我已经卸载 Unity，这是从我保留下来的工程文件找的，不知道是否可用
+
+  Arm_Rigth
+  #
+
+注：此演示退出不重置
+
+数值
+
+Bool：Arm_Right_Toggle，Reset_Right
+Float：Arm_1，Arm_2
+
+图层
+
+添加Avatar遮罩
+Default - Arm_Right_Toggle=True - BlendTree - Reset_Right=True - Resrt - Reset_Right=False - Default
+
+BlendTree
+
+Arm_1，Arm_2
+2D Freeform Directional(二维自由定向)
+6个Add Motion Field
+
+  
+      
+          Motion
+          Pos X
+          Pos Y
+      
+  
+  
+      
+          ArmDefault
+          0
+          0
+      
+      
+          ArmLeft
+          -1
+          0
+      
+      
+          ArmRight
+          1
+          0
+      
+      
+          ArmUp
+          0
+          1
+      
+      
+          ArmDown
+          0
+          -1
+      
+      
+          ArmRightUpLeft
+          -0.75
+          0.75
+      
+  
+
+
+菜单
+
+一、
+Type：Two Axis Puppet
+Parameter：Arm_Right_Toggle
+Parameter Horizontal：Arm_1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/other/PC_Arm_Moving/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="yexca&#39;Docs">
+  <meta property="og:description" content="Two Axis Puppet
+动画 # My Pan： PC_Arm_Moving.unitypackage
+原包我已经找不到了，而且我已经卸载 Unity，这是从我保留下来的工程文件找的，不知道是否可用
+Arm_Rigth # 注：此演示退出不重置
+数值 Bool：Arm_Right_Toggle，Reset_Right
+Float：Arm_1，Arm_2
+图层 添加Avatar遮罩
+Default - Arm_Right_Toggle=True - BlendTree - Reset_Right=True - Resrt - Reset_Right=False - Default
+BlendTree Arm_1，Arm_2
+2D Freeform Directional(二维自由定向)
+6个Add Motion Field
+Motion Pos X Pos Y ArmDefault 0 0 ArmLeft -1 0 ArmRight 1 0 ArmUp 0 1 ArmDown 0 -1 ArmRightUpLeft -0.75 0.75 菜单 一、
+Type：Two Axis Puppet
+Parameter：Arm_Right_Toggle
+Parameter Horizontal：Arm_1">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>PC Arm Moving | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/other/PC_Arm_Moving/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.b59afa28754f151b746f71dfb42e807de0a808d7a6b006adbb3387790c6205de.js" integrity="sha256-tZr6KHVPFRt0b3HftC6AfeCoCNemsAatuzOHeQxiBd4=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">首页</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/VRC_Avatar_Descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/PhysBones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/Contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/State_Behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Particle_System/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/Trail_Renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Summary/Menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_to_fbx/" class="">Mmd to Fbx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/mmd_upload/" class="">Mmd Upload</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Prepare/" class="">Prepare</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/sdk2_to_sdk3/" class="">Sdk2 to Sdk3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Upload/Upload/" class="">Upload</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/afk/" class="">Afk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Base/" class="">Base</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/Playable_Layers/" class="">Playable Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/change_clothes/" class="">Change Clothes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/gesture/" class="">Gesture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_MMD/" class="">Set Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_object/" class="">Set Object</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/tied_bones/" class="">Tied Bones</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Add_BlenderShapes/" class="">Add Blender Shapes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/emote_anim/" class="">Emote Anim</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/Pumkin_Tools/" class="">Pumkin Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/play_in_order/" class="">Play in Order</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/self_MMD/" class="">Self Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Shuffle_Playback/" class="">Shuffle Playback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/Start/" class="">Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle" checked />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/Blender_change_head/" class="">Blender Change Head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/PC_Arm_Moving/" class="active">PC Arm Moving</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/VRLabs_Marker/" class="">Vrlabs Marker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/References/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>PC Arm Moving</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#动画">动画</a></li>
+    <li><a href="#arm_rigth">Arm_Rigth</a></li>
+    <li><a href="#arm_both">Arm_Both</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>Two Axis Puppet</p>
+<h1 id="动画">
+  动画
+  <a class="anchor" href="#%e5%8a%a8%e7%94%bb">#</a>
+</h1>
+<p>My Pan：
+  <a href="https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/PC_Arm_Moving.zip">PC_Arm_Moving.unitypackage</a></p>
+<p><em>原包我已经找不到了，而且我已经卸载 Unity，这是从我保留下来的工程文件找的，不知道是否可用</em></p>
+<h1 id="arm_rigth">
+  Arm_Rigth
+  <a class="anchor" href="#arm_rigth">#</a>
+</h1>
+<p><em>注：此演示退出不重置</em></p>
+<ul>
+<li>数值</li>
+</ul>
+<p>Bool：Arm_Right_Toggle，Reset_Right</p>
+<p>Float：Arm_1，Arm_2</p>
+<ul>
+<li>图层</li>
+</ul>
+<p>添加Avatar遮罩</p>
+<p><code>Default</code> - <code>Arm_Right_Toggle=True</code> - <code>BlendTree</code> - <code>Reset_Right=True</code> - <code>Resrt</code> - <code>Reset_Right=False</code> - <code>Default</code></p>
+<ul>
+<li>BlendTree</li>
+</ul>
+<p>Arm_1，Arm_2</p>
+<p>2D Freeform Directional(二维自由定向)</p>
+<p>6个Add Motion Field</p>
+<table>
+  <thead>
+      <tr>
+          <th>Motion</th>
+          <th>Pos X</th>
+          <th>Pos Y</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ArmDefault</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmLeft</td>
+          <td>-1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmRight</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmUp</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>ArmDown</td>
+          <td>0</td>
+          <td>-1</td>
+      </tr>
+      <tr>
+          <td>ArmRightUpLeft</td>
+          <td>-0.75</td>
+          <td>0.75</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>菜单</li>
+</ul>
+<p>一、</p>
+<p>Type：Two Axis Puppet</p>
+<p>Parameter：Arm_Right_Toggle</p>
+<p>Parameter Horizontal：Arm_1</p>
+<p>Parameter Vertical：Arm_2</p>
+<p>二、</p>
+<p>Type：Button</p>
+<p>Parameter：Reset_Right</p>
+<h1 id="arm_both">
+  Arm_Both
+  <a class="anchor" href="#arm_both">#</a>
+</h1>
+<p><em>注：此演示退出即重置</em></p>
+<ul>
+<li>数值</li>
+</ul>
+<p>Bool：Arm_Both_Toggle</p>
+<p>Float：Arm_1，Arm_2</p>
+<ul>
+<li>图层</li>
+</ul>
+<p>添加Avatar遮罩</p>
+<p><code>Default</code> - <code>Arm_Both_Toggle=True</code> - <code>BlendTree</code></p>
+<p><code>BlendTree</code> - <code>Arm_Both_Toggle=False</code> - <code>Default</code></p>
+<ul>
+<li>BlendTree</li>
+</ul>
+<p>Arm_1，Arm_2</p>
+<p>2D Freeform Directional(二维自由定向)</p>
+<p>7个Add Motion Field</p>
+<table>
+  <thead>
+      <tr>
+          <th>Motion</th>
+          <th>Pos X</th>
+          <th>Pos Y</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ArmBothDefault</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmBothLeft</td>
+          <td>-1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmBothRight</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>ArmBothUp</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>ArmBothDown</td>
+          <td>0</td>
+          <td>-1</td>
+      </tr>
+      <tr>
+          <td>ArmBothUpLeft</td>
+          <td>-0.5</td>
+          <td>0.5</td>
+      </tr>
+      <tr>
+          <td>ArmBothLeftDown</td>
+          <td>-0.5</td>
+          <td>-0.5</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>菜单</li>
+</ul>
+<p>Type：Two Axis Puppet</p>
+<p>Parameter：Arm_Both_Toggle</p>
+<p>Parameter Horizontal：Arm_1</p>
+<p>Parameter Vertical：Arm_2</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/zh-cn/docs/other/PC_Arm_Moving.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span></span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#动画">动画</a></li>
+    <li><a href="#arm_rigth">Arm_Rigth</a></li>
+    <li><a href="#arm_both">Arm_Both</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

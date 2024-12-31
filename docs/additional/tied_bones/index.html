@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  简述
+  #
+
+物品绑骨可以让物品随骨骼运动，例如眼镜绑定头部骨骼，剑绑定手部骨骼
+
+  一、放在对应骨骼下方
+  #
+
+在左方找到模型相应的骨骼，然后将物品拖进去即可，可调整位置
+例如将剑拖入手部骨骼下方，然后更改位置是剑柄放在手上
+注意：如果物品有骨骼，需要将物品骨骼放入模型骨骼(想要邦骨的位置，如剑的骨骼放手上)，其他的放入模型子集，不然模型骨骼会出错
+
+  二、使用约束
+  #
+
+点击要邦骨的物体，然后在“检查器”里“添加组件”，搜索“Parent Constraint”并添加
+可以先将物品移动到对应的位置(例如将剑柄移动至手上)
+在下方“源”，点击加号，然后将想绑定的骨骼拖入(例如手部骨骼)
+然后在“检查器”里点击激活即可">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/additional/tied_bones/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="yexca&#39;Docs">
+  <meta property="og:description" content="简述 # 物品绑骨可以让物品随骨骼运动，例如眼镜绑定头部骨骼，剑绑定手部骨骼
+一、放在对应骨骼下方 # 在左方找到模型相应的骨骼，然后将物品拖进去即可，可调整位置
+例如将剑拖入手部骨骼下方，然后更改位置是剑柄放在手上
+注意：如果物品有骨骼，需要将物品骨骼放入模型骨骼(想要邦骨的位置，如剑的骨骼放手上)，其他的放入模型子集，不然模型骨骼会出错
+二、使用约束 # 点击要邦骨的物体，然后在“检查器”里“添加组件”，搜索“Parent Constraint”并添加
+可以先将物品移动到对应的位置(例如将剑柄移动至手上)
+在下方“源”，点击加号，然后将想绑定的骨骼拖入(例如手部骨骼)
+然后在“检查器”里点击激活即可">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Tied Bones | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/additional/tied_bones/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.012b15708917e9ef68976a81cc58e40eb02f4567455e606b95fd3221f00075e6.js" integrity="sha256-ASsVcIkX6e9ol2qBzFjkDrAvRWdFXmBrlf0yIfAAdeY=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="" aria-label="" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">首页</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/vrc_avatar_descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/physbones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dynamics/contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/state_behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/particle_system/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/div/trail_renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/summary/anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/summary/parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/summary/layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/summary/menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/upload/mmd_to_fbx/" class="">Mmd to Fbx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/upload/mmd_upload/" class="">Mmd Upload</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/upload/prepare/" class="">Prepare</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/upload/sdk2_to_sdk3/" class="">Sdk2 to Sdk3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/upload/upload/" class="">Upload</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/afk/" class="">Afk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/base/" class="">Base</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/playable_layers/" class="">Playable Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/editing/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle" checked />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/change_clothes/" class="">Change Clothes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/gesture/" class="">Gesture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_mmd/" class="">Set Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/set_object/" class="">Set Object</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/additional/tied_bones/" class="active">Tied Bones</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/add_blendershapes/" class="">Add Blender Shapes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/emote_anim/" class="">Emote Anim</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/emote/pumkin_tools/" class="">Pumkin Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/play_in_order/" class="">Play in Order</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/self_mmd/" class="">Self Mmd</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/shuffle_playback/" class="">Shuffle Playback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/script/start/" class="">Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/blender_change_head/" class="">Blender Change Head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/pc_arm_moving/" class="">PC Arm Moving</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/other/vrlabs_marker/" class="">Vrlabs Marker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/references/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Tied Bones</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简述">简述</a></li>
+        <li><a href="#一放在对应骨骼下方">一、放在对应骨骼下方</a></li>
+        <li><a href="#二使用约束">二、使用约束</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="简述">
+  简述
+  <a class="anchor" href="#%e7%ae%80%e8%bf%b0">#</a>
+</h2>
+<p>物品绑骨可以让物品随骨骼运动，例如眼镜绑定头部骨骼，剑绑定手部骨骼</p>
+<h2 id="一放在对应骨骼下方">
+  一、放在对应骨骼下方
+  <a class="anchor" href="#%e4%b8%80%e6%94%be%e5%9c%a8%e5%af%b9%e5%ba%94%e9%aa%a8%e9%aa%bc%e4%b8%8b%e6%96%b9">#</a>
+</h2>
+<p>在左方找到模型相应的骨骼，然后将物品拖进去即可，可调整位置</p>
+<p>例如将剑拖入手部骨骼下方，然后更改位置是剑柄放在手上</p>
+<p><strong>注意</strong>：如果物品有骨骼，需要将物品骨骼放入模型骨骼(想要邦骨的位置，如剑的骨骼放手上)，其他的放入模型子集，不然模型骨骼会出错</p>
+<h2 id="二使用约束">
+  二、使用约束
+  <a class="anchor" href="#%e4%ba%8c%e4%bd%bf%e7%94%a8%e7%ba%a6%e6%9d%9f">#</a>
+</h2>
+<p>点击要邦骨的物体，然后在“检查器”里“添加组件”，搜索“Parent Constraint”并添加</p>
+<p>可以先将物品移动到对应的位置(例如将剑柄移动至手上)</p>
+<p>在下方“源”，点击加号，然后将想绑定的骨骼拖入(例如手部骨骼)</p>
+<p>然后在“检查器”里点击激活即可</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/zh-cn/docs/additional/tied_bones.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span></span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简述">简述</a></li>
+        <li><a href="#一放在对应骨骼下方">一、放在对应骨骼下方</a></li>
+        <li><a href="#二使用约束">二、使用约束</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

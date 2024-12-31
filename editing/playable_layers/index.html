@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如果是SDK3模型，可能已经有了数值和菜单，如没有参考以下操作
+
+  动画层
+  #
+
+为模型添加Base，Action和FX默认控制器
+如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Playable Layers”里点击“Customize”，然后在对应层后面点“Default 图层名”
+如果是SDK3模型，可能已经有了对应层，可以将没有的加入
+然后在“Assets\VRCSDK\Examples3\Animation\Controllers”可找到所有的默认控制器
+
+Base vrc_AvatarV3LocomotionLayer.controller
+Action vrc_AvatarV3ActionLayer.controller
+FX vrc_AvatarV3HandsLayer.controller
+
+找到后点击并按“CTRL&#43;D”即可克隆相同文件，可按“F2”重命名，然后可将这些文件拖入模型所在文件夹并新建一个文件夹存放。
+再将文件拖入“VRC Avatar Descriptor”的“Playable Layers”对应位置即可。
+
+  数值与菜单
+  #
+
+
+  1）创建数值与菜单
+  #
+
+可以在模型文件下新建一个文件夹用来存放数值与菜单
+在“Assets”里右击，依次选择“创建-VRChat-Avatars-Expression Parameters” ，并重命名为“数值”
+右击，依次选择“创建-VRChat-Avatars-Expression Menu” ，并重命名为“主菜单”
+
+  2）为模型添加数值与菜单
+  #
+
+如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Expression”里点击“Customize”，然后将刚创建的“菜单”拖入“Menu”，“数值”拖入“Parameters”">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/editing/playable_layers/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="添加默认图层与菜单">
+  <meta property="og:description" content="如果是SDK3模型，可能已经有了数值和菜单，如没有参考以下操作
+动画层 # 为模型添加Base，Action和FX默认控制器
+如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Playable Layers”里点击“Customize”，然后在对应层后面点“Default 图层名”
+如果是SDK3模型，可能已经有了对应层，可以将没有的加入
+然后在“Assets\VRCSDK\Examples3\Animation\Controllers”可找到所有的默认控制器
+Base vrc_AvatarV3LocomotionLayer.controller Action vrc_AvatarV3ActionLayer.controller FX vrc_AvatarV3HandsLayer.controller 找到后点击并按“CTRL&#43;D”即可克隆相同文件，可按“F2”重命名，然后可将这些文件拖入模型所在文件夹并新建一个文件夹存放。
+再将文件拖入“VRC Avatar Descriptor”的“Playable Layers”对应位置即可。
+数值与菜单 # 1）创建数值与菜单 # 可以在模型文件下新建一个文件夹用来存放数值与菜单
+在“Assets”里右击，依次选择“创建-VRChat-Avatars-Expression Parameters” ，并重命名为“数值”
+右击，依次选择“创建-VRChat-Avatars-Expression Menu” ，并重命名为“主菜单”
+2）为模型添加数值与菜单 # 如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Expression”里点击“Customize”，然后将刚创建的“菜单”拖入“Menu”，“数值”拖入“Parameters”">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>添加默认图层与菜单 | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://vrchat.yexca.net/editing/playable_layers/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="这里有什么东西呢？" aria-label="这里有什么东西呢？" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/vrc_avatar_descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/physbones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/state_behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/particle_system/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/trail_renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
+    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/prepare/" class="">上传前准备</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/upload/" class="">成品模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_to_fbx/" class="">MMD 模型转为 FBX</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_upload/" class="">MMD 模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/sdk2_to_sdk3/" class="">SDK2 转为 SDK3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle" checked />
+    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/playable_layers/" class="active">添加默认图层与菜单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/base/" class="">Base 层-蹲姿，趴姿</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/afk/" class="">Action 层 - AFK</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/switch/" class="">FX 层 - 物品开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
+    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/tied_bones/" class="">物体绑骨</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/change_clothes/" class="">换衣服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_object/" class="">固定世界物品</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_mmd/" class="">固定世界 MMD</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/gesture/" class="">手势开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
+    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/emote_anim/" class="">添加手势表情</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/add_blendershapes/" class="">Blender 添加形态键</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/pumkin_tools/" class="">一键复制</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
+    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/self_mmd/" class="">自身跳 MMD 舞蹈</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/shuffle_playback/" class="">随机播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/play_in_order/" class="">顺序播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/start/" class="">出场动画</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
+    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/vrlabs_marker/" class="">添加一个可以写字的笔</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/blender_change_head/" class="">Blender 换头</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/pc_arm_moving/" class="">PC 下移动手</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/about/" class="">关于</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/references/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/yexca-VRChat/yexca-VRChat.github.io"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>添加默认图层与菜单</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#动画层">动画层</a></li>
+        <li><a href="#数值与菜单">数值与菜单</a>
+          <ul>
+            <li><a href="#1创建数值与菜单">1）创建数值与菜单</a></li>
+            <li><a href="#2为模型添加数值与菜单">2）为模型添加数值与菜单</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>如果是SDK3模型，可能已经有了数值和菜单，如没有参考以下操作</p>
+<h2 id="动画层">
+  动画层
+  <a class="anchor" href="#%e5%8a%a8%e7%94%bb%e5%b1%82">#</a>
+</h2>
+<p>为模型添加<code>Base</code>，<code>Action</code>和<code>FX</code>默认控制器</p>
+<p>如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Playable Layers”里点击“Customize”，然后在对应层后面点“Default 图层名”</p>
+<p>如果是SDK3模型，可能已经有了对应层，可以将没有的加入</p>
+<p>然后在“Assets\VRCSDK\Examples3\Animation\Controllers”可找到所有的默认控制器</p>
+<ul>
+<li>Base vrc_AvatarV3LocomotionLayer.controller</li>
+<li>Action vrc_AvatarV3ActionLayer.controller</li>
+<li>FX vrc_AvatarV3HandsLayer.controller</li>
+</ul>
+<p>找到后点击并按“CTRL+D”即可克隆相同文件，可按“F2”重命名，然后可将这些文件拖入模型所在文件夹并新建一个文件夹存放。</p>
+<p>再将文件拖入“VRC Avatar Descriptor”的“Playable Layers”对应位置即可。</p>
+<h2 id="数值与菜单">
+  数值与菜单
+  <a class="anchor" href="#%e6%95%b0%e5%80%bc%e4%b8%8e%e8%8f%9c%e5%8d%95">#</a>
+</h2>
+<h3 id="1创建数值与菜单">
+  1）创建数值与菜单
+  <a class="anchor" href="#1%e5%88%9b%e5%bb%ba%e6%95%b0%e5%80%bc%e4%b8%8e%e8%8f%9c%e5%8d%95">#</a>
+</h3>
+<p>可以在模型文件下新建一个文件夹用来存放数值与菜单</p>
+<p>在“Assets”里右击，依次选择“创建-VRChat-Avatars-Expression Parameters” ，并重命名为“数值”</p>
+<p>右击，依次选择“创建-VRChat-Avatars-Expression Menu” ，并重命名为“主菜单”</p>
+<h3 id="2为模型添加数值与菜单">
+  2）为模型添加数值与菜单
+  <a class="anchor" href="#2%e4%b8%ba%e6%a8%a1%e5%9e%8b%e6%b7%bb%e5%8a%a0%e6%95%b0%e5%80%bc%e4%b8%8e%e8%8f%9c%e5%8d%95">#</a>
+</h3>
+<p>如果是“SDK2转SDK3”或“MMD模型”，在“VRC Avatar Descriptor”的“Expression”里点击“Customize”，然后将刚创建的“菜单”拖入“Menu”，“数值”拖入“Parameters”</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/editing/Playable_Layers.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#动画层">动画层</a></li>
+        <li><a href="#数值与菜单">数值与菜单</a>
+          <ul>
+            <li><a href="#1创建数值与菜单">1）创建数值与菜单</a></li>
+            <li><a href="#2为模型添加数值与菜单">2）为模型添加数值与菜单</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

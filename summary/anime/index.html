@@ -1,172 +1,60 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.140.1">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="
-公告
-学业繁忙，不再更新维护，请勿问我问题，不会回复！因为我也不会
+<meta name="description" content="首先是制作动画，动画的制作一般是一个物品开关
 
-
-  说明/目录
+  开关
   #
 
+物品开关即录制动画把一个物品打开
+同时这个物品可以放在自己的身体部位上（物体绑骨），例如手部
+粒子特效一般也可以通过录制开关进行播放
 
-
-  VRC Avatar Descriptor VRChat描述文件的介绍
-
-  PhysBones VRChat动骨的介绍
-
-  Contacts VRChat交互的介绍
-
-  State Behaviors VRChat提供的状态机脚本的介绍
-
-  Cloth Unity布料
-
-  Particle System Unity粒子系统
-
-  Trail Renderer Unity轨迹渲染器
-
-  Animation 动画的制作
-
-  Parameters 数值的类型与官方数值
-
-  Animator Layers Unity动画器的图层
-
-  VRChat Menu VRChat的菜单
-上传：这部分是模型的上传
-
-
-  上传前准备
-
-  成品模型上传
-
-  MMD模型转为FBX
-
-  MMD模型上传
-
-  SDK2转为SDK3
-
-
-修改：这部分是简单的修改
-
-
-  添加默认图层与菜单
-
-  Base层-蹲姿，趴姿
-
-  Action层-AFK
-
-  FX层-物品开关
-
-
-附加：修改的附加部分
-
-
-  物体绑骨
-
-  换衣服
-
-  固定世界物品
-
-  固定世界MMD
-
-  手势开关
-
-
-表情：表情制作相关
-
-
-  添加手势表情
-
-  Blender添加形态键
-
-  一键复制
-
-
-脚本：此部分修改使用了VRC的脚本
-
-
-  自身跳MMD舞蹈
-
-  随机播放音乐
-
-  顺序播放音乐
-
-  出场动画
-
-
-其他：其他修改
-
-
-  添加一个可以写字的笔
-
-  Blender换头
-
-  PC下移动手
-
-
-
-  关于
-
-  参考资料
-
-原本只是说明，考虑到手机端不是太方便观看便加上目录
-另外我VRChat的ID为 
-  yexca
-放出 ID 只是防止被冒充
-
-  待办
+  动作
   #
 
-以下是通过评论或私信或其他渠道希望我做的相关内容，说实话与其等我写出来不如自己去研究 (等我做出来自己早就精通了)
-按照时间顺序排列，已经做好就不放链接了，左上角有搜索
-斜体表示应该不会做，未标注原因则为没时间
+动作动画一般是MMD的舞蹈动作或Pose动作，建议使用现成的，自己制作较为困难
 
- SDK描述文件(VRC Avatar Descriptor)的介绍
- 修改/制作表情动画
- Blender换头
- 粒子系统（这个因个人能力有限，可能不会做视频）
- 顺序播放音乐
- 按手势 拔出和发射武器
- 更改自身亮度
- 制作动作动画
- 出场动画
- 换头发(我好像没有相关物品，可能做不了)
- 换颜色
- 多个头手势与嘴型
- 挥动武器显示特效
- 摇尾巴
- Blender换衣服
- 弗利萨超行星特效 (这都什么玩意
-">
+  现成的
+  #
+
+对于MMD舞蹈，一般可以使用相应的工具进行转换为Unity可以识别的文件，对于Pose动作一般有成品可以进行购买使用
+
+  自行制作
+  #
+
+如果使用Unity进行制作是不现实的（动作可以在动画窗口添加属性-Animator里找），可以在其他软件制作骨骼动画以导入Unity
+
+  其他
+  #
+
+例如物品移动，表情动画，Shader改变以改头发颜色等">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/summary/anime/">
   <meta property="og:site_name" content="yexca&#39;Docs">
-  <meta property="og:title" content="首页">
-  <meta property="og:description" content="公告
-学业繁忙，不再更新维护，请勿问我问题，不会回复！因为我也不会
-说明/目录 # VRC Avatar Descriptor VRChat描述文件的介绍 PhysBones VRChat动骨的介绍 Contacts VRChat交互的介绍 State Behaviors VRChat提供的状态机脚本的介绍 Cloth Unity布料 Particle System Unity粒子系统 Trail Renderer Unity轨迹渲染器 Animation 动画的制作 Parameters 数值的类型与官方数值 Animator Layers Unity动画器的图层 VRChat Menu VRChat的菜单 上传：这部分是模型的上传 上传前准备 成品模型上传 MMD模型转为FBX MMD模型上传 SDK2转为SDK3 修改：这部分是简单的修改 添加默认图层与菜单 Base层-蹲姿，趴姿 Action层-AFK FX层-物品开关 附加：修改的附加部分 物体绑骨 换衣服 固定世界物品 固定世界MMD 手势开关 表情：表情制作相关 添加手势表情 Blender添加形态键 一键复制 脚本：此部分修改使用了VRC的脚本 自身跳MMD舞蹈 随机播放音乐 顺序播放音乐 出场动画 其他：其他修改 添加一个可以写字的笔 Blender换头 PC下移动手 关于 参考资料 原本只是说明，考虑到手机端不是太方便观看便加上目录
-另外我VRChat的ID为 yexca
-放出 ID 只是防止被冒充
-待办 # 以下是通过评论或私信或其他渠道希望我做的相关内容，说实话与其等我写出来不如自己去研究 (等我做出来自己早就精通了)
-按照时间顺序排列，已经做好就不放链接了，左上角有搜索
-斜体表示应该不会做，未标注原因则为没时间
-SDK描述文件(VRC Avatar Descriptor)的介绍 修改/制作表情动画 Blender换头 粒子系统（这个因个人能力有限，可能不会做视频） 顺序播放音乐 按手势 拔出和发射武器 更改自身亮度 制作动作动画 出场动画 换头发(我好像没有相关物品，可能做不了) 换颜色 多个头手势与嘴型 挥动武器显示特效 摇尾巴 Blender换衣服 弗利萨超行星特效 (这都什么玩意">
+  <meta property="og:title" content="Animation">
+  <meta property="og:description" content="首先是制作动画，动画的制作一般是一个物品开关
+开关 # 物品开关即录制动画把一个物品打开 同时这个物品可以放在自己的身体部位上（物体绑骨），例如手部
+粒子特效一般也可以通过录制开关进行播放
+动作 # 动作动画一般是MMD的舞蹈动作或Pose动作，建议使用现成的，自己制作较为困难
+现成的 # 对于MMD舞蹈，一般可以使用相应的工具进行转换为Unity可以识别的文件，对于Pose动作一般有成品可以进行购买使用
+自行制作 # 如果使用Unity进行制作是不现实的（动作可以在动画窗口添加属性-Animator里找），可以在其他软件制作骨骼动画以导入Unity
+其他 # 例如物品移动，表情动画，Shader改变以改头发颜色等">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="website">
-<title>首页 | yexca&#39;Docs</title>
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Animation | yexca&#39;Docs</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://vrchat.yexca.net/">
+<link rel="canonical" href="https://vrchat.yexca.net/summary/anime/">
 <link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
   <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://vrchat.yexca.net/index.xml" title="yexca'Docs" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -309,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/summary/anime/" class="">Animation</a>
+    <a href="/summary/anime/" class="active">Animation</a>
   
 
         </li>
@@ -865,7 +753,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>首页</h3>
+  <h3>Animation</h3>
 
   <label for="toc-control">
     
@@ -883,8 +771,14 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#说明目录">说明/目录</a></li>
-        <li><a href="#待办">待办</a></li>
+        <li><a href="#开关">开关</a></li>
+        <li><a href="#动作">动作</a>
+          <ul>
+            <li><a href="#现成的">现成的</a></li>
+            <li><a href="#自行制作">自行制作</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他">其他</a></li>
       </ul>
     </li>
   </ul>
@@ -899,143 +793,34 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><blockquote class="book-hint warning">
-<p><strong>公告</strong><br>
-学业繁忙，不再更新维护，请勿问我问题，不会回复！<del>因为我也不会</del></p>
-</blockquote>
-<h2 id="说明目录">
-  说明/目录
-  <a class="anchor" href="#%e8%af%b4%e6%98%8e%e7%9b%ae%e5%bd%95">#</a>
+  <article class="markdown book-article"><p>首先是制作动画，动画的制作一般是一个物品开关</p>
+<h2 id="开关">
+  开关
+  <a class="anchor" href="#%e5%bc%80%e5%85%b3">#</a>
 </h2>
-<ul>
-<li>
-  <a href="/div/vrc_avatar_descriptor/">VRC Avatar Descriptor</a> <em>VRChat描述文件的介绍</em></li>
-<li>
-  <a href="/dynamics/physbones/">PhysBones</a> <em>VRChat动骨的介绍</em></li>
-<li>
-  <a href="/dynamics/contacts/">Contacts</a> <em>VRChat交互的介绍</em></li>
-<li>
-  <a href="/div/state_behaviors/">State Behaviors</a> <em>VRChat提供的状态机脚本的介绍</em></li>
-<li>
-  <a href="/div/cloth/">Cloth</a> <em>Unity布料</em></li>
-<li>
-  <a href="/div/particle_system/">Particle System</a> <em>Unity粒子系统</em></li>
-<li>
-  <a href="/div/trail_renderer/">Trail Renderer</a> <em>Unity轨迹渲染器</em></li>
-<li>
-  <a href="/summary/anime/">Animation</a> <em>动画的制作</em></li>
-<li>
-  <a href="/summary/parameters/">Parameters</a> <em>数值的类型与官方数值</em></li>
-<li>
-  <a href="/summary/layers/">Animator Layers</a> <em>Unity动画器的图层</em></li>
-<li>
-  <a href="/summary/menu/">VRChat Menu</a> <em>VRChat的菜单</em></li>
-<li>上传：<em>这部分是模型的上传</em>
-<ul>
-<li>
-  <a href="/upload/prepare/">上传前准备</a></li>
-<li>
-  <a href="/upload/upload/">成品模型上传</a></li>
-<li>
-  <a href="/upload/mmd_to_fbx/">MMD模型转为FBX</a></li>
-<li>
-  <a href="/upload/mmd_upload/">MMD模型上传</a></li>
-<li>
-  <a href="/upload/sdk2_to_sdk3/">SDK2转为SDK3</a></li>
-</ul>
-</li>
-<li>修改：<em>这部分是简单的修改</em>
-<ul>
-<li>
-  <a href="/editing/playable_layers/">添加默认图层与菜单</a></li>
-<li>
-  <a href="/editing/base/">Base层-蹲姿，趴姿</a></li>
-<li>
-  <a href="/editing/afk/">Action层-AFK</a></li>
-<li>
-  <a href="/editing/switch/">FX层-物品开关</a></li>
-</ul>
-</li>
-<li>附加：<em>修改的附加部分</em>
-<ul>
-<li>
-  <a href="/additional/tied_bones/">物体绑骨</a></li>
-<li>
-  <a href="/additional/change_clothes/">换衣服</a></li>
-<li>
-  <a href="/additional/set_object/">固定世界物品</a></li>
-<li>
-  <a href="/additional/set_mmd/">固定世界MMD</a></li>
-<li>
-  <a href="/additional/gesture/">手势开关</a></li>
-</ul>
-</li>
-<li>表情：<em>表情制作相关</em>
-<ul>
-<li>
-  <a href="/emote/emote_anim/">添加手势表情</a></li>
-<li>
-  <a href="/emote/add_blendershapes/">Blender添加形态键</a></li>
-<li>
-  <a href="/emote/pumkin_tools/">一键复制</a></li>
-</ul>
-</li>
-<li>脚本：<em>此部分修改使用了VRC的脚本</em>
-<ul>
-<li>
-  <a href="/script/self_mmd/">自身跳MMD舞蹈</a></li>
-<li>
-  <a href="/script/shuffle_playback/">随机播放音乐</a></li>
-<li>
-  <a href="/script/play_in_order/">顺序播放音乐</a></li>
-<li>
-  <a href="/script/start/">出场动画</a></li>
-</ul>
-</li>
-<li>其他：<em>其他修改</em>
-<ul>
-<li>
-  <a href="/other/vrlabs_marker/">添加一个可以写字的笔</a></li>
-<li>
-  <a href="/other/blender_change_head/">Blender换头</a></li>
-<li>
-  <a href="/other/pc_arm_moving/">PC下移动手</a></li>
-</ul>
-</li>
-<li>
-  <a href="/about/">关于</a></li>
-<li>
-  <a href="/references/">参考资料</a></li>
-</ul>
-<p><del>原本只是说明，考虑到手机端不是太方便观看便加上目录</del></p>
-<p>另外我VRChat的ID为 
-  <a href="https://vrchat.com/home/user/usr_16490da9-3083-4d90-baab-f19d939c2732">yexca</a><br>
-<em>放出 ID 只是防止被冒充</em></p>
-<h2 id="待办">
-  待办
-  <a class="anchor" href="#%e5%be%85%e5%8a%9e">#</a>
+<p>物品开关即录制动画把一个物品打开
+同时这个物品可以放在自己的身体部位上（物体绑骨），例如手部</p>
+<p>粒子特效一般也可以通过录制开关进行播放</p>
+<h2 id="动作">
+  动作
+  <a class="anchor" href="#%e5%8a%a8%e4%bd%9c">#</a>
 </h2>
-<p>以下是通过评论或私信或其他渠道希望我做的相关内容，说实话与其等我写出来不如自己去研究 <del>(等我做出来自己早就精通了)</del><br>
-按照时间顺序排列，已经做好就不放链接了，左上角有搜索<br>
-<em>斜体表示应该不会做，未标注原因则为没时间</em></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> SDK描述文件(VRC Avatar Descriptor)的介绍</li>
-<li><input checked="" disabled="" type="checkbox"> 修改/制作表情动画</li>
-<li><input checked="" disabled="" type="checkbox"> Blender换头</li>
-<li><input checked="" disabled="" type="checkbox"> 粒子系统（这个因个人能力有限，可能不会做视频）</li>
-<li><input checked="" disabled="" type="checkbox"> 顺序播放音乐</li>
-<li><input checked="" disabled="" type="checkbox"> 按手势 拔出和发射武器</li>
-<li><input checked="" disabled="" type="checkbox"> 更改自身亮度</li>
-<li><input checked="" disabled="" type="checkbox"> 制作动作动画</li>
-<li><input checked="" disabled="" type="checkbox"> 出场动画</li>
-<li><input disabled="" type="checkbox"> <em>换头发(我好像没有相关物品，可能做不了)</em></li>
-<li><input checked="" disabled="" type="checkbox"> 换颜色</li>
-<li><input checked="" disabled="" type="checkbox"> 多个头手势与嘴型</li>
-<li><input checked="" disabled="" type="checkbox"> 挥动武器显示特效</li>
-<li><input checked="" disabled="" type="checkbox"> 摇尾巴</li>
-<li><input disabled="" type="checkbox"> <em>Blender换衣服</em></li>
-<li><input disabled="" type="checkbox"> <em>弗利萨超行星特效 <del>(这都什么玩意</del></em></li>
-</ul>
+<p>动作动画一般是MMD的舞蹈动作或Pose动作，建议使用现成的，自己制作较为困难</p>
+<h3 id="现成的">
+  现成的
+  <a class="anchor" href="#%e7%8e%b0%e6%88%90%e7%9a%84">#</a>
+</h3>
+<p>对于MMD舞蹈，一般可以使用相应的工具进行转换为Unity可以识别的文件，对于Pose动作一般有成品可以进行购买使用</p>
+<h3 id="自行制作">
+  自行制作
+  <a class="anchor" href="#%e8%87%aa%e8%a1%8c%e5%88%b6%e4%bd%9c">#</a>
+</h3>
+<p>如果使用Unity进行制作是不现实的（动作可以在动画窗口添加属性-Animator里找），可以在其他软件制作<code>骨骼动画</code>以导入Unity</p>
+<h2 id="其他">
+  其他
+  <a class="anchor" href="#%e5%85%b6%e4%bb%96">#</a>
+</h2>
+<p>例如物品移动，表情动画，Shader改变以改头发颜色等</p>
 </article>
  
       
@@ -1045,16 +830,10 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/commit/9b2bee4faa494dfeb08e6b19689e470a0cca1681" title='最后修改者 yexca | 2024-12-31' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="" />
-      <span>2024-12-31</span>
-    </a>
-  </div>
-
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/Summary/Anime.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="" />
       <span>编辑本页</span>
     </a>
@@ -1088,8 +867,14 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#说明目录">说明/目录</a></li>
-        <li><a href="#待办">待办</a></li>
+        <li><a href="#开关">开关</a></li>
+        <li><a href="#动作">动作</a>
+          <ul>
+            <li><a href="#现成的">现成的</a></li>
+            <li><a href="#自行制作">自行制作</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他">其他</a></li>
       </ul>
     </li>
   </ul>
