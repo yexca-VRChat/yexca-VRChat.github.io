@@ -2,99 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://vrchat.yexca.net/home/</loc>
+  </url><url>
     <loc>https://vrchat.yexca.net/upload/prepare/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/</loc>
-    <lastmod>2024-12-31T12:40:48+00:00</lastmod>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/editing/playable_layers/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/emote/emote_anim/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/other/vrlabs_marker/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/additional/tied_bones/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/script/self_mmd/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/upload/upload/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/editing/base/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/other/blender_change_head/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/emote/add_blendershapes/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/div/vrc_avatar_descriptor/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/additional/change_clothes/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/script/shuffle_playback/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/editing/afk/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/upload/mmd_to_fbx/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/other/pc_arm_moving/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/dynamics/physbones/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/additional/set_object/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/script/play_in_order/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/emote/pumkin_tools/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/dynamics/contacts/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/editing/switch/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/upload/mmd_upload/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/script/start/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/additional/set_mmd/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/upload/sdk2_to_sdk3/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/div/state_behaviors/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/additional/gesture/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/div/cloth/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/div/particle_system/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/div/trail_renderer/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/summary/anime/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/summary/parameters/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/summary/layers/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/summary/menu/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/upload/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/editing/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/additional/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/emote/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/script/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/other/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/about/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/references/</loc>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/docs/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T15:33:48+00:00</lastmod>
   </url><url>
     <loc>https://vrchat.yexca.net/categories/</loc>
   </url><url>

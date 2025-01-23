@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子
+<meta name="description" content="
+Trail Renderer
+轨迹渲染器
+
+轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子
 
   创建
   #
@@ -105,19 +109,22 @@ Trail Renderer Inspector中的Materials部分列出了Trail Renderer当前使用
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/div/trail_renderer/">
   <meta property="og:site_name" content="yexca&#39;Docs">
   <meta property="og:title" content="Trail Renderer">
-  <meta property="og:description" content="轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子
+  <meta property="og:description" content="Trail Renderer
+轨迹渲染器
+轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子
 创建 # 在层级中右击Effects(效果)-Trail(拖尾)
 轨迹设置 # 属性 功能 Width(宽度) 定义宽度值和曲线值以控制轨迹沿其长度的宽度。双击可创建新的顶点 Time(时间) 定义轨迹中某个点的生命周期（以秒为单位） Min Vertex Distance(最小顶点距离) 轨迹中两点之间的最小距离（采用世界单位） AutoDestruct(自动销毁) 启用此属性可在附加到Trail Renderer组件的游戏对象静止Time秒之后销毁该游戏对象 Emitting(正在发射) 启用此属性后，Unity 会在轨迹中添加新点。禁用此属性后，Unity 不会向轨迹中添加新点。使用此属性可暂停和恢复轨迹生成功能 Color(颜色) 定义一个渐变来控制轨迹沿其长度的颜色 Corner Vertices(角顶点) 此属性指示在绘制轨迹中的角时使用多少个额外顶点。增加此值可使轨迹的角显得更圆 End Cap Vertices(末端顶点) 此属性指示使用多少个额外顶点在轨迹上创建端盖。增加此值可使轨迹的端盖显得更圆 Alignment(对齐) 设置轨迹面向的方向 View(视图) 轨迹面向摄像机 TransformZ(变换Z) 轨迹朝向其变换组件的 Z 轴 Texture Mode(纹理模式) 控制如何将纹理应用于轨迹 Stretch(伸展) 沿轨迹的整个长度映射纹理一次 Tile(平铺) 基于轨迹长度（采用世界单位）沿轨迹重复纹理。要设置平铺率，请使用 Material.SetTextureScale() DistributePerSegment(按段分配) 沿轨迹的整个长度映射纹理一次（假设所有顶点均匀分布） RepeatPerSegment(每段重复) 沿轨迹重复纹理（每个轨迹段重复一次）。要调整平铺率，请使用 Material.SetTextureScale() Generate Lighting Data(生成照明数据) 如果启用此属性，Unity 在构建轨迹几何体时包含法线和切线。这样，轨迹几何体就可以使用采用了场景光照的材质 Shadow Bias(阴影偏离) 设置沿着光照方向的阴影移动量以消除阴影瑕疵 Materials(材质) # Trail Renderer Inspector中的Materials部分列出了Trail Renderer当前使用的材质。如果将多个材质应用于轨迹渲染器，则会为每个材质渲染一次">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2024-12-31T15:33:48+00:00">
 <title>Trail Renderer | yexca&#39;Docs</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://vrchat.yexca.net/div/trail_renderer/">
 <link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
+  <script defer src="/zh-cn.search.min.b4cd360741ac205bec704fa86a37840ba3d03285f6f43b3cfccda89a2320d409.js" integrity="sha256-tM02B0GsIFvscE&#43;oajeEC6PQMoX29Ds8/M2omiMg1Ak=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -163,6 +170,19 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/home/" class="">目录</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -314,8 +334,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
-    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+    <input type="checkbox" id="section-73fbcf00a0681172968545fd3c68a7bd" class="toggle"  />
+    <label for="section-73fbcf00a0681172968545fd3c68a7bd" class="flex justify-between">
       <a role="button" class="">上传</a>
     </label>
   
@@ -400,8 +420,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
-    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+    <input type="checkbox" id="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="toggle"  />
+    <label for="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="flex justify-between">
       <a role="button" class="">修改</a>
     </label>
   
@@ -473,8 +493,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
-    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+    <input type="checkbox" id="section-896c3b993111e4199e1a61913df8a03b" class="toggle"  />
+    <label for="section-896c3b993111e4199e1a61913df8a03b" class="flex justify-between">
       <a role="button" class="">附加</a>
     </label>
   
@@ -559,8 +579,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
-    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+    <input type="checkbox" id="section-d5eb73999aa491a3201a56fc5fba5e94" class="toggle"  />
+    <label for="section-d5eb73999aa491a3201a56fc5fba5e94" class="flex justify-between">
       <a role="button" class="">表情</a>
     </label>
   
@@ -619,8 +639,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
-    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+    <input type="checkbox" id="section-b259681709742722a883c3fedb8022d4" class="toggle"  />
+    <label for="section-b259681709742722a883c3fedb8022d4" class="flex justify-between">
       <a role="button" class="">脚本</a>
     </label>
   
@@ -692,8 +712,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
-    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+    <input type="checkbox" id="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="toggle"  />
+    <label for="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="flex justify-between">
       <a role="button" class="">其他</a>
     </label>
   
@@ -856,7 +876,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><p>轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子</p>
+  <article class="markdown book-article"><blockquote class="book-hint info">
+<p><strong>Trail Renderer</strong><br>
+轨迹渲染器</p>
+</blockquote>
+<p>轨迹渲染器 (Trail Renderer) 组件在移动的游戏对象后面渲染一条多边形轨迹。此组件可用于强调移动对象的运动感，或突出移动对象的路径或位置。飞弹背后的轨迹为飞弹的飞行轨道增添了视觉清晰度；来自飞机机翼尖端的凝结尾迹是现实生活中出现的轨迹效果的一个例子</p>
 <h2 id="创建">
   创建
   <a class="anchor" href="#%e5%88%9b%e5%bb%ba">#</a>
@@ -1128,13 +1152,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  <div>
-    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/div/Trail_Renderer.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="" />
-      <span>编辑本页</span>
-    </a>
-  </div>
 
 
 </div>

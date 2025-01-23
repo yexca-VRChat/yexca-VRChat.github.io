@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="不同图层的状态可以同时发生，同一图层同时只能执行一个状态
+<meta name="description" content="
+Animator Layers
+Unity 图层的机制，模型是如何被修改的呢？
+
+不同图层的状态可以同时发生，同一图层同时只能执行一个状态
 
   图层
   #
 
-点击&#43;可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
+点击 &#43; 可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
 
   
       
@@ -145,8 +149,10 @@
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/summary/layers/">
   <meta property="og:site_name" content="yexca&#39;Docs">
   <meta property="og:title" content="Animator Layers">
-  <meta property="og:description" content="不同图层的状态可以同时发生，同一图层同时只能执行一个状态
-图层 # 点击&#43;可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
+  <meta property="og:description" content="Animator Layers
+Unity 图层的机制，模型是如何被修改的呢？
+不同图层的状态可以同时发生，同一图层同时只能执行一个状态
+图层 # 点击 &#43; 可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数
 属性 描述 Weight(权重) 这一层的权重，0代表该层权重是0（该层不生效），1代表该层权重为1（该层中的动画能完全表现） Mask(遮罩) 此层上使用的遮罩，可以限制动画的播放部位，例如只要播放上半身的动画，可以使用一个遮罩定义在上半身播放动画。设置后该图层上面会显示一个M的小图标 Blending 和其他层混合的模式 Override 覆盖上面的层中对应Mask的部位 Additive 会加在之前图层的动画之上 Sync 复用其他层中的状态机 IK Pass 反向动力学 状态 # 状态是指在图层中的小方框，当拖入动画时会自动变成的“东西”
 新建一个图层，可以看到三个状态
 状态名称 简述 Entry 入口，根据过渡进入默认状态 Any State 任意状态，只要条件满足，可任意跳转到过渡的状态 Exit 退出，返回到”Entry“ 添加状态 # 可以在空白处右键添加Empty(空状态)，也可以将动画文件拖到Animator窗口中添加一个状态
@@ -159,13 +165,14 @@
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2024-12-31T15:33:48+00:00">
 <title>Animator Layers | yexca&#39;Docs</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://vrchat.yexca.net/summary/layers/">
 <link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
+  <script defer src="/zh-cn.search.min.b4cd360741ac205bec704fa86a37840ba3d03285f6f43b3cfccda89a2320d409.js" integrity="sha256-tM02B0GsIFvscE&#43;oajeEC6PQMoX29Ds8/M2omiMg1Ak=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -211,6 +218,19 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/home/" class="">目录</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -362,8 +382,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
-    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+    <input type="checkbox" id="section-73fbcf00a0681172968545fd3c68a7bd" class="toggle"  />
+    <label for="section-73fbcf00a0681172968545fd3c68a7bd" class="flex justify-between">
       <a role="button" class="">上传</a>
     </label>
   
@@ -448,8 +468,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
-    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+    <input type="checkbox" id="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="toggle"  />
+    <label for="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="flex justify-between">
       <a role="button" class="">修改</a>
     </label>
   
@@ -521,8 +541,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
-    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+    <input type="checkbox" id="section-896c3b993111e4199e1a61913df8a03b" class="toggle"  />
+    <label for="section-896c3b993111e4199e1a61913df8a03b" class="flex justify-between">
       <a role="button" class="">附加</a>
     </label>
   
@@ -607,8 +627,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
-    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+    <input type="checkbox" id="section-d5eb73999aa491a3201a56fc5fba5e94" class="toggle"  />
+    <label for="section-d5eb73999aa491a3201a56fc5fba5e94" class="flex justify-between">
       <a role="button" class="">表情</a>
     </label>
   
@@ -667,8 +687,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle"  />
-    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+    <input type="checkbox" id="section-b259681709742722a883c3fedb8022d4" class="toggle"  />
+    <label for="section-b259681709742722a883c3fedb8022d4" class="flex justify-between">
       <a role="button" class="">脚本</a>
     </label>
   
@@ -740,8 +760,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
-    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+    <input type="checkbox" id="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="toggle"  />
+    <label for="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="flex justify-between">
       <a role="button" class="">其他</a>
     </label>
   
@@ -913,12 +933,16 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><p>不同图层的状态可以同时发生，同一图层同时只能执行一个状态</p>
+  <article class="markdown book-article"><blockquote class="book-hint info">
+<p><strong>Animator Layers</strong><br>
+Unity 图层的机制，模型是如何被修改的呢？</p>
+</blockquote>
+<p>不同图层的状态可以同时发生，同一图层同时只能执行一个状态</p>
 <h2 id="图层">
   图层
   <a class="anchor" href="#%e5%9b%be%e5%b1%82">#</a>
 </h2>
-<p>点击<code>+</code>可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数</p>
+<p>点击 <code>+</code> 可以添加一个图层，点击图层旁边的齿轮图标，会弹出一个小窗口，可以设置该图层对应的参数</p>
 <table>
   <thead>
       <tr>
@@ -1151,7 +1175,7 @@ https://github.com/alex-shpak/hugo-book
 </h4>
 <p>上面的参数不仅可以手动修改，也可以通过过渡图预览和修改</p>
 <p>
-  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.d1zgl4fkjnc.webp" alt="" /></p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.d1zgl4fkjnc.webp" alt="img" /></p>
 <h4 id="中断源interruption-source">
   中断源(Interruption Source)
   <a class="anchor" href="#%e4%b8%ad%e6%96%ad%e6%ba%90interruption-source">#</a>
@@ -1159,7 +1183,7 @@ https://github.com/alex-shpak/hugo-book
 <p>可以打断状态的过渡，但尽量避免使用，比较复杂</p>
 <p>例如以下图层</p>
 <p>
-  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3j6e8ox86fg0.webp" alt="" /></p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3j6e8ox86fg0.webp" alt="img" /></p>
 <h5 id="current-state当前状态">
   Current State(当前状态)
   <a class="anchor" href="#current-state%e5%bd%93%e5%89%8d%e7%8a%b6%e6%80%81">#</a>
@@ -1167,7 +1191,7 @@ https://github.com/alex-shpak/hugo-book
 <p>默认情况下，当A到C的切换触发后，状态机开始切换到C，在切换到C之前无法被改变。但是，如果将A-&gt;C的过渡的<code>中断源(Interruption Source)</code>改为<code>Current State</code>，A-&gt;C的过渡就可以被A上的<strong>一些</strong>过渡中断</p>
 <p>在状态A上的过渡如下：</p>
 <p>
-  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3te260424lu0.webp" alt="" /></p>
+  <img src="https://jsd.cdn.zzko.cn/gh/yexca/picx-images-hosting@master/2022-VRChat/07-Layers/image.3te260424lu0.webp" alt="img" /></p>
 <p><code>一些</code>的原因：若勾选<code>Ordered Interruption</code>则只有优先级比A-&gt;B高的才能打断</p>
 <p>过渡的优先级从上到下依次降低，即优先级<code>A-&gt;B</code>&gt;<code>A-&gt;C</code>&gt;<code>A-&gt;D</code></p>
 <ul>
@@ -1283,8 +1307,10 @@ https://github.com/alex-shpak/hugo-book
   </tbody>
 </table>
 <p>如果<code>Has Exit Time</code>勾选了，并且过渡还有一个或多个条件，那么过渡需要同时满足到达<code>Exit Time</code>，同时条件全为true，才会切换到下一个state</p>
-<p><strong>一个过渡至少要有一个条件（Has Exit Time可以作为一个条件），否则过渡将会被忽略(不会被执行进入下一个状态)</strong></p>
-<p><em>注：Trigger貌似在VRChat中没有作用，至少我不知道</em></p>
+<blockquote>
+<p>一个过渡至少要有一个条件（Has Exit Time可以作为一个条件），否则过渡将会被忽略(不会被执行进入下一个状态)</p>
+</blockquote>
+<p>注：<em>Trigger貌似在VRChat中没有作用，至少我不知道</em></p>
 </article>
  
       
@@ -1295,13 +1321,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  <div>
-    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/Summary/Layers.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="" />
-      <span>编辑本页</span>
-    </a>
-  </div>
 
 
 </div>

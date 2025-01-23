@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="(Animator Locomotion Control)
+<meta name="description" content="
+自身跳 MMD 舞蹈
+使用 Animator Locomotion Control 脚本的一个例子，变可爱后怎么会忍住不跳舞呢
+
 
   一、文件准备
   #
@@ -52,14 +55,14 @@
 
 进入 Action 层，跟随 Entry-WaitForActionOrAFK-Prepare Standing，Prepare Standing 后连接八个过渡，任选一个过渡后的状态，将 Motion 替换为舞蹈动画
 然后添加组件 Animator Locomotion Control，将 Locomotion Control 设置为 Disable，如果不设置游戏中转动或移动时模型也会动
-检查前后过渡是否正确，是否有相应条件 (如前面为VRCEmote 等于 1，后面为 VRCEmote 不等于 1) 并且是否将退出时间关闭
-在下一个状态(“BlendOut Stand”)添加组件“Animator Locomotion Control”，将“Locomotion Control”设置为“Enable”，如果不设置游戏里再也无法移动或转动视角">
+检查前后过渡是否正确，是否有相应条件 (如前面为VRCEmote 等于 1，后面为 VRCEmote 不等于 1) 并且是否将退出时间关闭">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/script/self_mmd/">
   <meta property="og:site_name" content="yexca&#39;Docs">
   <meta property="og:title" content="自身跳 MMD 舞蹈">
-  <meta property="og:description" content="(Animator Locomotion Control)
+  <meta property="og:description" content="自身跳 MMD 舞蹈
+使用 Animator Locomotion Control 脚本的一个例子，变可爱后怎么会忍住不跳舞呢
 一、文件准备 # 舞蹈动画文件 音乐 关于MMD舞蹈转换，请参考： 固定世界 MMD
 不过这里要调整动画方向，点击动画文件，在右方”跟变换旋转-依据“选择”原始“
 二、制作音乐开关 # 1）压缩音频 # 点击音频文件，在右方选择压缩格式(一般默认的 Vorbis 即可)，选择质量(越低压缩率越高)，然后点击应用即可
@@ -69,18 +72,18 @@
 4）制作音频开关 # 录制开关参考： FX 层-物品开关
 三、动画器添加动画 # Action 层 # 进入 Action 层，跟随 Entry-WaitForActionOrAFK-Prepare Standing，Prepare Standing 后连接八个过渡，任选一个过渡后的状态，将 Motion 替换为舞蹈动画
 然后添加组件 Animator Locomotion Control，将 Locomotion Control 设置为 Disable，如果不设置游戏中转动或移动时模型也会动
-检查前后过渡是否正确，是否有相应条件 (如前面为VRCEmote 等于 1，后面为 VRCEmote 不等于 1) 并且是否将退出时间关闭
-在下一个状态(“BlendOut Stand”)添加组件“Animator Locomotion Control”，将“Locomotion Control”设置为“Enable”，如果不设置游戏里再也无法移动或转动视角">
+检查前后过渡是否正确，是否有相应条件 (如前面为VRCEmote 等于 1，后面为 VRCEmote 不等于 1) 并且是否将退出时间关闭">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2024-12-31T15:33:48+00:00">
 <title>自身跳 MMD 舞蹈 | yexca&#39;Docs</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://vrchat.yexca.net/script/self_mmd/">
 <link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh-cn.search.min.f10cd181d6468beabd5b620521fc402d55b0da7d3c0a254d00143a27499aac82.js" integrity="sha256-8QzRgdZGi&#43;q9W2IFIfxALVWw2n08CiVNABQ6J0marII=" crossorigin="anonymous"></script>
+  <script defer src="/zh-cn.search.min.b4cd360741ac205bec704fa86a37840ba3d03285f6f43b3cfccda89a2320d409.js" integrity="sha256-tM02B0GsIFvscE&#43;oajeEC6PQMoX29Ds8/M2omiMg1Ak=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -126,6 +129,19 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/home/" class="">目录</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -277,8 +293,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-808ac744b64fb970b9826595d6cc47ca" class="toggle"  />
-    <label for="section-808ac744b64fb970b9826595d6cc47ca" class="flex justify-between">
+    <input type="checkbox" id="section-73fbcf00a0681172968545fd3c68a7bd" class="toggle"  />
+    <label for="section-73fbcf00a0681172968545fd3c68a7bd" class="flex justify-between">
       <a role="button" class="">上传</a>
     </label>
   
@@ -363,8 +379,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-595cf3825a8496444dced708be5ccbda" class="toggle"  />
-    <label for="section-595cf3825a8496444dced708be5ccbda" class="flex justify-between">
+    <input type="checkbox" id="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="toggle"  />
+    <label for="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="flex justify-between">
       <a role="button" class="">修改</a>
     </label>
   
@@ -436,8 +452,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="toggle"  />
-    <label for="section-8ef57d4f85fe952f8f40a5e6a26ad065" class="flex justify-between">
+    <input type="checkbox" id="section-896c3b993111e4199e1a61913df8a03b" class="toggle"  />
+    <label for="section-896c3b993111e4199e1a61913df8a03b" class="flex justify-between">
       <a role="button" class="">附加</a>
     </label>
   
@@ -522,8 +538,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dbe64ade437611008e8f965f962dd0ab" class="toggle"  />
-    <label for="section-dbe64ade437611008e8f965f962dd0ab" class="flex justify-between">
+    <input type="checkbox" id="section-d5eb73999aa491a3201a56fc5fba5e94" class="toggle"  />
+    <label for="section-d5eb73999aa491a3201a56fc5fba5e94" class="flex justify-between">
       <a role="button" class="">表情</a>
     </label>
   
@@ -582,8 +598,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dda7eff3058efa5244b8715dcb6e00b9" class="toggle" checked />
-    <label for="section-dda7eff3058efa5244b8715dcb6e00b9" class="flex justify-between">
+    <input type="checkbox" id="section-b259681709742722a883c3fedb8022d4" class="toggle" checked />
+    <label for="section-b259681709742722a883c3fedb8022d4" class="flex justify-between">
       <a role="button" class="">脚本</a>
     </label>
   
@@ -655,8 +671,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8d56535ba6a302d49678eaa723b5611b" class="toggle"  />
-    <label for="section-8d56535ba6a302d49678eaa723b5611b" class="flex justify-between">
+    <input type="checkbox" id="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="toggle"  />
+    <label for="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="flex justify-between">
       <a role="button" class="">其他</a>
     </label>
   
@@ -834,7 +850,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><p>(Animator Locomotion Control)</p>
+  <article class="markdown book-article"><blockquote class="book-hint info">
+<p><strong>自身跳 MMD 舞蹈</strong><br>
+使用 Animator Locomotion Control 脚本的一个例子，变可爱后怎么会忍住不跳舞呢</p>
+</blockquote>
 <h2 id="一文件准备">
   一、文件准备
   <a class="anchor" href="#%e4%b8%80%e6%96%87%e4%bb%b6%e5%87%86%e5%a4%87">#</a>
@@ -915,13 +934,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  <div>
-    <a class="flex align-center" href="https://github.com/yexca-VRChat/yexca-VRChat.github.io/edit/main//content/zh-cn/docs/script/self_MMD.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="" />
-      <span>编辑本页</span>
-    </a>
-  </div>
 
 
 </div>

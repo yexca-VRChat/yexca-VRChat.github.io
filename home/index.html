@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+目录
+这里有什么呢？
+
+
+
+  VRC Avatar Descriptor VRChat描述文件的介绍
+
+  PhysBones VRChat动骨的介绍
+
+  Contacts VRChat交互的介绍
+
+  State Behaviors VRChat提供的状态机脚本的介绍
+
+  Cloth Unity布料
+
+  Particle System Unity粒子系统
+
+  Trail Renderer Unity轨迹渲染器
+
+  Animation 动画的制作
+
+  Parameters 数值的类型与官方数值
+
+  Animator Layers Unity动画器的图层
+
+  VRChat Menu VRChat的菜单
+上传：这部分是模型的上传
+
+
+  上传前准备
+
+  成品模型上传
+
+  MMD模型转为FBX
+
+  MMD模型上传
+
+  SDK2转为SDK3
+
+
+修改：这部分是简单的修改
+
+
+  添加默认图层与菜单
+
+  Base层-蹲姿，趴姿
+
+  Action层-AFK
+
+  FX层-物品开关
+
+
+附加：修改的附加部分
+
+
+  物体绑骨
+
+  换衣服
+
+  固定世界物品
+
+  固定世界MMD
+
+  手势开关
+
+
+表情：表情制作相关
+
+
+  添加手势表情
+
+  Blender添加形态键
+
+  一键复制
+
+
+脚本：此部分修改使用了VRC的脚本
+
+
+  自身跳MMD舞蹈
+
+  随机播放音乐
+
+  顺序播放音乐
+
+  出场动画
+
+
+其他：其他修改
+
+
+  添加一个可以写字的笔
+
+  Blender换头
+
+  PC下移动手
+
+
+
+  关于
+
+  参考资料
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://vrchat.yexca.net/home/">
+  <meta property="og:site_name" content="yexca&#39;Docs">
+  <meta property="og:title" content="目录">
+  <meta property="og:description" content="目录
+这里有什么呢？
+VRC Avatar Descriptor VRChat描述文件的介绍 PhysBones VRChat动骨的介绍 Contacts VRChat交互的介绍 State Behaviors VRChat提供的状态机脚本的介绍 Cloth Unity布料 Particle System Unity粒子系统 Trail Renderer Unity轨迹渲染器 Animation 动画的制作 Parameters 数值的类型与官方数值 Animator Layers Unity动画器的图层 VRChat Menu VRChat的菜单 上传：这部分是模型的上传 上传前准备 成品模型上传 MMD模型转为FBX MMD模型上传 SDK2转为SDK3 修改：这部分是简单的修改 添加默认图层与菜单 Base层-蹲姿，趴姿 Action层-AFK FX层-物品开关 附加：修改的附加部分 物体绑骨 换衣服 固定世界物品 固定世界MMD 手势开关 表情：表情制作相关 添加手势表情 Blender添加形态键 一键复制 脚本：此部分修改使用了VRC的脚本 自身跳MMD舞蹈 随机播放音乐 顺序播放音乐 出场动画 其他：其他修改 添加一个可以写字的笔 Blender换头 PC下移动手 关于 参考资料">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>目录 | yexca&#39;Docs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://vrchat.yexca.net/home/">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.b4cd360741ac205bec704fa86a37840ba3d03285f6f43b3cfccda89a2320d409.js" integrity="sha256-tM02B0GsIFvscE&#43;oajeEC6PQMoX29Ds8/M2omiMg1Ak=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>yexca&#39;Docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="这里有什么东西呢？" aria-label="这里有什么东西呢？" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/home/" class="active">目录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/vrc_avatar_descriptor/" class="">VRC Avatar Descriptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/physbones/" class="">PhysBones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/dynamics/contacts/" class="">Contacts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/state_behaviors/" class="">State Behaviors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/cloth/" class="">Cloth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/particle_system/" class="">Particle System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/div/trail_renderer/" class="">Trail Renderer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/anime/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/parameters/" class="">Parameters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/layers/" class="">Animator Layers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/summary/menu/" class="">VRChat Menu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-73fbcf00a0681172968545fd3c68a7bd" class="toggle"  />
+    <label for="section-73fbcf00a0681172968545fd3c68a7bd" class="flex justify-between">
+      <a role="button" class="">上传</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/prepare/" class="">上传前准备</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/upload/" class="">成品模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_to_fbx/" class="">MMD 模型转为 FBX</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/mmd_upload/" class="">MMD 模型上传</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/upload/sdk2_to_sdk3/" class="">SDK2 转为 SDK3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="toggle"  />
+    <label for="section-4437d0f35d3882e8f50f1a4ea8a2894f" class="flex justify-between">
+      <a role="button" class="">修改</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/playable_layers/" class="">添加默认图层与菜单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/base/" class="">Base 层-蹲姿，趴姿</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/afk/" class="">Action 层 - AFK</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/editing/switch/" class="">FX 层 - 物品开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-896c3b993111e4199e1a61913df8a03b" class="toggle"  />
+    <label for="section-896c3b993111e4199e1a61913df8a03b" class="flex justify-between">
+      <a role="button" class="">附加</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/tied_bones/" class="">物体绑骨</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/change_clothes/" class="">换衣服</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_object/" class="">固定世界物品</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/set_mmd/" class="">固定世界 MMD</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/additional/gesture/" class="">手势开关</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5eb73999aa491a3201a56fc5fba5e94" class="toggle"  />
+    <label for="section-d5eb73999aa491a3201a56fc5fba5e94" class="flex justify-between">
+      <a role="button" class="">表情</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/emote_anim/" class="">添加手势表情</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/add_blendershapes/" class="">Blender 添加形态键</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/emote/pumkin_tools/" class="">一键复制</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b259681709742722a883c3fedb8022d4" class="toggle"  />
+    <label for="section-b259681709742722a883c3fedb8022d4" class="flex justify-between">
+      <a role="button" class="">脚本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/self_mmd/" class="">自身跳 MMD 舞蹈</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/shuffle_playback/" class="">随机播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/play_in_order/" class="">顺序播放音乐</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/script/start/" class="">出场动画</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="toggle"  />
+    <label for="section-1a23091b3eadddf9cfbfbfa4ebaeb767" class="flex justify-between">
+      <a role="button" class="">其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/vrlabs_marker/" class="">添加一个可以写字的笔</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/blender_change_head/" class="">Blender 换头</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/other/pc_arm_moving/" class="">PC 下移动手</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/about/" class="">关于</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/references/" class="">参考资料</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/yexca-VRChat/yexca-VRChat.github.io"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>目录</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><blockquote class="book-hint info">
+<p><strong>目录</strong><br>
+这里有什么呢？</p>
+</blockquote>
+<ul>
+<li>
+  <a href="/div/vrc_avatar_descriptor/">VRC Avatar Descriptor</a> <em>VRChat描述文件的介绍</em></li>
+<li>
+  <a href="/dynamics/physbones/">PhysBones</a> <em>VRChat动骨的介绍</em></li>
+<li>
+  <a href="/dynamics/contacts/">Contacts</a> <em>VRChat交互的介绍</em></li>
+<li>
+  <a href="/div/state_behaviors/">State Behaviors</a> <em>VRChat提供的状态机脚本的介绍</em></li>
+<li>
+  <a href="/div/cloth/">Cloth</a> <em>Unity布料</em></li>
+<li>
+  <a href="/div/particle_system/">Particle System</a> <em>Unity粒子系统</em></li>
+<li>
+  <a href="/div/trail_renderer/">Trail Renderer</a> <em>Unity轨迹渲染器</em></li>
+<li>
+  <a href="/summary/anime/">Animation</a> <em>动画的制作</em></li>
+<li>
+  <a href="/summary/parameters/">Parameters</a> <em>数值的类型与官方数值</em></li>
+<li>
+  <a href="/summary/layers/">Animator Layers</a> <em>Unity动画器的图层</em></li>
+<li>
+  <a href="/summary/menu/">VRChat Menu</a> <em>VRChat的菜单</em></li>
+<li>上传：<em>这部分是模型的上传</em>
+<ul>
+<li>
+  <a href="/upload/prepare/">上传前准备</a></li>
+<li>
+  <a href="/upload/upload/">成品模型上传</a></li>
+<li>
+  <a href="/upload/mmd_to_fbx/">MMD模型转为FBX</a></li>
+<li>
+  <a href="/upload/mmd_upload/">MMD模型上传</a></li>
+<li>
+  <a href="/upload/sdk2_to_sdk3/">SDK2转为SDK3</a></li>
+</ul>
+</li>
+<li>修改：<em>这部分是简单的修改</em>
+<ul>
+<li>
+  <a href="/editing/playable_layers/">添加默认图层与菜单</a></li>
+<li>
+  <a href="/editing/base/">Base层-蹲姿，趴姿</a></li>
+<li>
+  <a href="/editing/afk/">Action层-AFK</a></li>
+<li>
+  <a href="/editing/switch/">FX层-物品开关</a></li>
+</ul>
+</li>
+<li>附加：<em>修改的附加部分</em>
+<ul>
+<li>
+  <a href="/additional/tied_bones/">物体绑骨</a></li>
+<li>
+  <a href="/additional/change_clothes/">换衣服</a></li>
+<li>
+  <a href="/additional/set_object/">固定世界物品</a></li>
+<li>
+  <a href="/additional/set_mmd/">固定世界MMD</a></li>
+<li>
+  <a href="/additional/gesture/">手势开关</a></li>
+</ul>
+</li>
+<li>表情：<em>表情制作相关</em>
+<ul>
+<li>
+  <a href="/emote/emote_anim/">添加手势表情</a></li>
+<li>
+  <a href="/emote/add_blendershapes/">Blender添加形态键</a></li>
+<li>
+  <a href="/emote/pumkin_tools/">一键复制</a></li>
+</ul>
+</li>
+<li>脚本：<em>此部分修改使用了VRC的脚本</em>
+<ul>
+<li>
+  <a href="/script/self_mmd/">自身跳MMD舞蹈</a></li>
+<li>
+  <a href="/script/shuffle_playback/">随机播放音乐</a></li>
+<li>
+  <a href="/script/play_in_order/">顺序播放音乐</a></li>
+<li>
+  <a href="/script/start/">出场动画</a></li>
+</ul>
+</li>
+<li>其他：<em>其他修改</em>
+<ul>
+<li>
+  <a href="/other/vrlabs_marker/">添加一个可以写字的笔</a></li>
+<li>
+  <a href="/other/blender_change_head/">Blender换头</a></li>
+<li>
+  <a href="/other/pc_arm_moving/">PC下移动手</a></li>
+</ul>
+</li>
+<li>
+  <a href="/about/">关于</a></li>
+<li>
+  <a href="/references/">参考资料</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
