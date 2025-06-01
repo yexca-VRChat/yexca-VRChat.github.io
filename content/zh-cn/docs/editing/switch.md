@@ -80,7 +80,7 @@ slug: /editing/switch
 
 ## 六、简要概括-飞行
 
-首先下载一个预制件：[飞行.prefab](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/飞行.zip)
+首先下载一个预制件：[飞行.prefab](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/飞行.zip)
 
 1）将物品放入模型子集
 

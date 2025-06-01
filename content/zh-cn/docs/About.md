@@ -33,7 +33,7 @@ slug: /about
 除非特别注明，本站所有文章在 [CC BY-NC-SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 下授权  
 这意味着您可以自由地转载，修改本文，但必须遵守以下规定：  
 
-您必须给出适当的署名（[yexca](https://lit.link/yexca)），提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改（包括标题）  
+您必须给出适当的署名（[yexca](https://blog.yexca.net/) 或者 Github 的链接），提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改（包括标题）  
 您不得将本作品用于商业目的  
 如果您再混合、转换或者基于本作品进行创作，您必须  
 同样基于该许可协议（即 CC BY-NC-SA 4.0 协议）分发您贡献的作品
@@ -45,7 +45,7 @@ slug: /about
 ~~然后就是里面的文章可能就那样不会去修改了吧~~  
 目前已经更换网站系统，文章 ~~(如果有)~~ 将继续发布，原有文章链接替换完毕，不再更新  
 
-如果想继续访问可以在本地部署，仓库：<https://github.com/yexca-VRChat/blog>  
+如果想继续访问可以在本地部署，仓库：<https://github.com/yexca-VRChat/vrchat-blog-archive>  
 在 2024.07.31 部署在 Github 上了，上面仓库是 Typecho 的 Docker 镜像
 
 ## 关于此网站
@@ -76,4 +76,7 @@ slug: /about
 
 ## 关于我
 
-如果您想了解我的话：<https://lit.link/yexca>
+如果您想了解我的话：
+
+* 我的博客: <https://blog.yexca.net>
+* Lit Link 名片: <https://lit.link/yexca>

@@ -13,7 +13,7 @@ Two Axis Puppet
 
 ## 动画
 
-下载地址：[PC_Arm_Moving.unitypackage](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/PC_Arm_Moving.zip)
+下载地址：[PC_Arm_Moving.unitypackage](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/PC_Arm_Moving.zip)
 
 {{% hint info %}}
 原包我已经找不到了，而且我已经卸载 Unity，这是从我保留下来的工程文件找的，不知道是否可用

@@ -43,7 +43,7 @@ menu:
   # before: 
   after:
     - name: "Github"
-      url: "https://github.com/yexca-VRChat/yexca-VRChat.github.io"
+      url: "https://github.com/yexca-VRChat/vrchat-docs-source"
       weight: 10
 
 params:

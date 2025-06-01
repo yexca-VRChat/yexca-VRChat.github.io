@@ -13,7 +13,7 @@ slug: /additional/set_object
 
 ### 1）下载并导入Unity
 
-点击下载：[稳定刚体](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/稳定刚体.zip)
+点击下载：[稳定刚体](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/稳定刚体.zip)
 
 下载后解压将整个文件夹拖入Unity中
 
