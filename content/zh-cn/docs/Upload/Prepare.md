@@ -52,11 +52,11 @@ VRChat 下载界面链接：[Download – VRChat](https://vrchat.com/home/downlo
 
 ### 一、动骨插件
 
-点击下载：[Dynamic Bone 1.2.0](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/Dynamic%20Bone%201.2.0.zip)
+点击下载：[Dynamic Bone 1.2.0](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/Dynamic%20Bone%201.2.0.zip)
 
 ### 二、着色器插件
 
-点击下载：[UTS2](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/UTS2.zip)
+点击下载：[UTS2](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/UTS2.zip)
 
 ### 三、其他
 

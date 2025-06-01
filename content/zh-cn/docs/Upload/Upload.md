@@ -25,7 +25,7 @@ lastmod: 2024-12-31
 
 #### <1>下载 zh-cn.po 文件
 
-下载链接：[zh-cn.po](https://raw.githubusercontent.com/yexca-VRChat/yexca-VRChat.github.io/main/file/zh-cn.zip)
+下载链接：[zh-cn.po](https://raw.githubusercontent.com/yexca-VRChat/vrchat-docs-source/main/file/zh-cn.zip)
 
 #### <2>把文件放在 Unity 安装目录下
 
