@@ -1,0 +1,32 @@
+name: Build and Deploy Hugo Docs
+
+on:
+  push:
+    branches:
+      - main  # 监听源仓库主分支的更新
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.140.1'
+          extended: true
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Deploy to blogWeb repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: yexca-VRChat/vrchat-docs-web
+          publish_branch: main  # blogWeb 的分支
+          publish_dir: ./public  # Hugo 默认输出目录
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
